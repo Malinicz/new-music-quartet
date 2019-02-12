@@ -8,7 +8,7 @@ const theme = {
     brighter: '#F7F7F7',
     bright: '#d1d1d1',
     dark: '#939393',
-    darker: '#363636',
+    darker: '#222222',
     darkest: '#000000',
     primary: '#B4D6BD',
     primaryDarker: '#87BC95',
@@ -19,7 +19,7 @@ const theme = {
     regular: 400,
     bold: 700,
   },
-  primaryFontFamily: 'Freight',
+  primaryFontFamily: 'BorgiaPro',
   breakpoints: {
     large: 1100,
     medium: 768,

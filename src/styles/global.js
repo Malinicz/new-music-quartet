@@ -1,8 +1,8 @@
 import { injectGlobal } from 'styled-components';
 import theme from './theme';
 
-const primaryRegular = require('assets/fonts/freight-big-book.otf');
-const primaryBold = require('assets/fonts/freight-big-bold.otf');
+const primaryRegular = require('assets/fonts/BorgiaPro-Regular.otf');
+const primaryBold = require('assets/fonts/BorgiaPro-Bold.otf');
 
 injectGlobal`
   @font-face {
