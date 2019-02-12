@@ -114,14 +114,8 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    global.window.addEventListener(
-      'scroll',
-      this.throttle(this.changePics, 100)
-    );
-    global.window.addEventListener(
-      'mousemove',
-      this.throttle(this.animatePics, 200)
-    );
+    window.addEventListener('scroll', this.throttle(this.changePics, 100));
+    window.addEventListener('mousemove', this.throttle(this.animatePics, 200));
   }
 
   onChangePic = () => {
@@ -187,9 +181,13 @@ class Home extends Component {
   render() {
     const { activePic, posX, posY, animate } = this.state;
 
-    const translateXValue = 50 + (posX / window.innerWidth) * 10;
+    let translateXValue = 50;
+    let scaleValue = 1;
 
-    const scaleValue = 1 + posY / window.innerHeight / 10;
+    if (typeof window !== 'undefined') {
+      translateXValue += (posX / window.innerWidth) * 10;
+      scaleValue = 1 + posY / window.innerHeight / 10;
+    }
 
     return (
       <Holder>
