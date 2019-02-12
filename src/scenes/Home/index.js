@@ -114,9 +114,14 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.throttle(this.changePics, 100));
-    window.addEventListener('mousemove', this.throttle(this.animatePics, 200));
-    window.addEventListener('pictureChange', this.onChangePic);
+    global.window.addEventListener(
+      'scroll',
+      this.throttle(this.changePics, 100)
+    );
+    global.window.addEventListener(
+      'mousemove',
+      this.throttle(this.animatePics, 200)
+    );
   }
 
   onChangePic = () => {
