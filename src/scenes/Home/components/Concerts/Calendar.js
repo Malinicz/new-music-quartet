@@ -13,6 +13,7 @@ const CalendarItem = styled.div`
   display: flex;
   flex-direction: column;
   width: 270px;
+  margin-bottom: 50px;
 `;
 
 const CalendarItemTitle = styled.div`

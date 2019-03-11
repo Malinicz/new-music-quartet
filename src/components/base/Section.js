@@ -48,6 +48,8 @@ export const SectionImage = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
     height: 300px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 `;
 
@@ -60,6 +62,10 @@ export const SectionHeading = styled(H1)`
   align-items: center;
   margin: 0;
   padding: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    left: 0;
+  }
 `;
 
 export const SectionHeadingLine = styled.div`
@@ -107,7 +113,6 @@ export const SectionAsideBottom = styled.div`
   z-index: 5;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
-    margin-top: 50px;
     justify-content: flex-start;
   }
 `;

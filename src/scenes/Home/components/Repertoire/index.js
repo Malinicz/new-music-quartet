@@ -29,6 +29,10 @@ const SongsHolder = styled.div`
 const SongsColumn = styled.div`
   flex: 1;
   min-width: 270px;
+
+  &:last-child {
+    margin-bottom: 50px;
+  }
 `;
 
 const Song = styled.div`

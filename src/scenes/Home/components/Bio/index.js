@@ -42,7 +42,7 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
           </SectionImage>
           <SectionContent>
             <Paragraph>{paragraph1}</Paragraph>
-            <Paragraph>{paragraph2}</Paragraph>
+            <Paragraph style={{ marginBottom: '50px' }}>{paragraph2}</Paragraph>
           </SectionContent>
         </StandardSectionMain>
         <StandardSectionAside>
