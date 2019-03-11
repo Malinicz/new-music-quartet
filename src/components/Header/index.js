@@ -33,6 +33,7 @@ const MenuItemsHolder = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 20px;
   font-size: 1.5em;
   font-family: 'GillSans';
   text-transform: uppercase;
@@ -47,8 +48,9 @@ const MenuItemsHolder = styled.div`
 `;
 
 const MenuItem = styled.div`
-  padding: 15px;
+  padding: 10px;
   transition: 0.3s ease all;
+  font-size: 0.9em;
   cursor: pointer;
 
   &:hover {

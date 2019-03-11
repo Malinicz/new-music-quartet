@@ -5,8 +5,8 @@ import client from './src/services/contentfulClient';
 
 import pl from './src/data/pl';
 
-const siteRoot = 'https://newmusicquartet.netlify.com';
-const stagingSiteRoot = 'https://staging-newmusicquartet.netlify.com';
+const siteRoot = 'https://atma.netlify.com';
+const stagingSiteRoot = 'https://staging-atma.netlify.com';
 const basePath = '';
 const stagingBasePath = '';
 
