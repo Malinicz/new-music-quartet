@@ -1,5 +1,5 @@
 import * as styledComponents from 'styled-components';
-import Theme from './theme';
+import styledTheme from './theme';
 
 const {
   default: styled,
@@ -10,6 +10,13 @@ const {
   ServerStyleSheet,
 } = styledComponents;
 
-export { css, injectGlobal, keyframes, ThemeProvider, ServerStyleSheet, Theme };
+export {
+  css,
+  injectGlobal,
+  keyframes,
+  ThemeProvider,
+  ServerStyleSheet,
+  styledTheme,
+};
 
 export default styled;

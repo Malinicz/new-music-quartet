@@ -8,11 +8,11 @@ export const LinkWrapper = styled.a`
   }
 `;
 
-export const ParagraphLink = LinkWrapper.extend`
+export const ParagraphLink = styled(LinkWrapper)`
   color: ${({ theme }) => theme.colors.primaryDarker};
 `;
 
-export const BlockLink = LinkWrapper.extend`
+export const BlockLink = styled(LinkWrapper)`
   display: inline-flex;
   align-items: center;
   text-transform: uppercase;

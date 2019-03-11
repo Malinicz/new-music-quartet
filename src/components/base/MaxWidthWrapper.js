@@ -5,5 +5,8 @@ export const MaxWidthWrapper = styled.div`
   flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
   width: 100%;
   max-width: ${({ theme }) => theme.maxWidth}px;
-  padding: ${({ theme }) => `0 ${theme.spacing}px`};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+    flex-direction: column;
+  }
 `;

@@ -1,10 +1,11 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
 
 const primaryRegular = require('assets/fonts/BorgiaPro-Regular.otf');
 const primaryBold = require('assets/fonts/BorgiaPro-Bold.otf');
+const secondaryMedium = require('assets/fonts/GillSans-Medium.otf');
 
-injectGlobal`
+export default createGlobalStyle`
   @font-face {
     font-family: ${theme.primaryFontFamily};
     src: url('${primaryRegular}');
@@ -19,6 +20,13 @@ injectGlobal`
     font-style: normal;
   }
 
+  @font-face {
+    font-family: ${theme.secondaryFontFamily};
+    src: url('${secondaryMedium}');
+    font-weight: ${theme.fontWeight.medium};
+    font-style: normal;
+  }
+
   body {
     position: relative;
     margin: 0;
@@ -26,9 +34,9 @@ injectGlobal`
     font-family: ${theme.primaryFontFamily}, arial, sans-serif;
     font-style: normal;
     font-weight: ${theme.fontWeight.regular};
-    font-size: 16px;
+    font-size: 17px;
     color: ${theme.colors.darker};
-    background-color: ${theme.colors.brighter};
+    background-color: ${theme.colors.darker};
     overflow-x: hidden;
   }
 

@@ -11,18 +11,18 @@ const theme = {
     darker: '#222222',
     darkest: '#000000',
     primary: '#B4D6BD',
-    primaryDarker: '#87BC95',
-    secondary: '#D6B4C0',
-    secondaryDarker: '#B78597',
+    secondary: '#670A0E',
   },
   fontWeight: {
     regular: 400,
+    medium: 500,
     bold: 700,
   },
   primaryFontFamily: 'BorgiaPro',
+  secondaryFontFamily: 'GillSans',
   breakpoints: {
-    large: 1100,
-    medium: 768,
+    large: 1070,
+    medium: 800,
     small: 500,
   },
 };

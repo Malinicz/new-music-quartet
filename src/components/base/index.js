@@ -1,4 +1,15 @@
-export { Section } from './Section';
+export {
+  Section,
+  StandardSection,
+  StandardSectionMain,
+  StandardSectionAside,
+  SectionImage,
+  SectionHeading,
+  SectionHeadingLine,
+  SectionAsideTop,
+  SectionAsideBottom,
+  SectionContent,
+} from './Section';
 export { Button } from './Buttons';
 export { TextInput } from './Inputs';
 export { H1, H2 } from './Headers';
@@ -7,3 +18,4 @@ export { LinkWrapper, ParagraphLink, BlockLink } from './LinkWrappers';
 export { MaxWidthWrapper } from './MaxWidthWrapper';
 export { Card } from './Card';
 export { Form, InputGroup, Input, InputLabel, TextArea } from './Form';
+export { BackgroundLetter } from './BackgroundLetter';

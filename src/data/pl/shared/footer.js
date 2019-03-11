@@ -1,3 +1,3 @@
 export default {
-  allRightReservedInfo: 'Wszelkie prawa zastrzeżone © New Music Quartet 2018',
+  allRightsReservedInfo: 'Wszelkie prawa zastrzeżone © New Music Quartet 2018',
 };

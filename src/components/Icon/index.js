@@ -1,16 +1,19 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 import styled from 'styles';
-import { MailIcon } from './svgIcons';
+import { MailIcon, ArrowRightIcon, Document } from './svgIcons';
 
 const icons = {
   mail: <MailIcon />,
+  arrowRight: <ArrowRightIcon />,
+  document: <Document />,
 };
 
 const IconHolder = styled.div`
   display: inline-block;
   margin-top: ${({ marginTop }) => marginTop || 3}px;
   width: ${({ size }) => size}px;
+  min-width: ${({ size }) => size}px;
   fill: currentColor;
   margin-right: ${({ marginRight }) => marginRight || 0}px;
   margin-left: ${({ marginLeft }) => marginLeft || 0}px;
@@ -22,8 +25,7 @@ export const Icon = ({ name, size, marginRight, marginLeft, marginTop }) => {
       size={size}
       marginLeft={marginLeft}
       marginRight={marginRight}
-      marginTop={marginTop}
-    >
+      marginTop={marginTop}>
       {icons[name]}
     </IconHolder>
   );

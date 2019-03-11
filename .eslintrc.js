@@ -29,5 +29,7 @@ module.exports = {
     'react/forbid-prop-types': OFF,
     'no-confusing-arrow': OFF,
     'import/order': OFF,
+    'no-return-assign': OFF,
+    'no-restricted-syntax': OFF,
   },
 };

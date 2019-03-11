@@ -3,15 +3,18 @@ import { Router } from 'react-static';
 import { hot } from 'react-hot-loader';
 import Routes from 'react-static-routes';
 
-import { ThemeProvider, Theme } from 'styles';
-import 'styles/global';
+import { ThemeProvider, styledTheme } from 'styles';
+import GlobalStyles from 'styles/global';
 
 const App = () => (
-  <Router>
-    <ThemeProvider theme={Theme}>
-      <Routes />
-    </ThemeProvider>
-  </Router>
+  <React.Fragment>
+    <Router>
+      <ThemeProvider theme={styledTheme}>
+        <Routes />
+      </ThemeProvider>
+    </Router>
+    <GlobalStyles />
+  </React.Fragment>
 );
 
 export default hot(module)(App);
