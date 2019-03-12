@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styles';
-import { func } from 'prop-types';
+import { func, string } from 'prop-types';
 
 const LanguageSwitchHolder = styled.div`
   position: absolute;
@@ -26,19 +26,24 @@ const LanguageCell = styled.div`
   border-radius: 10px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
 `;
 
-export const LanguageSwitch = ({ handleLanguageSwitch }) => {
+export const LanguageSwitch = ({ handleLanguageSwitch, activeLanguage }) => {
   return (
     <LanguageSwitchHolder>
       {['pl', 'en'].map((language) => {
-        const isActive = language === 'pl';
+        const isActive = language === activeLanguage;
+        console.log('activeLanguage: ', activeLanguage);
 
         return (
           <LanguageCell
             id={language}
             key={language}
-            onClick={handleLanguageSwitch}
+            onClick={() => handleLanguageSwitch(language)}
             isActive={isActive}>
             {language}
           </LanguageCell>
@@ -50,4 +55,5 @@ export const LanguageSwitch = ({ handleLanguageSwitch }) => {
 
 LanguageSwitch.propTypes = {
   handleLanguageSwitch: func.isRequired,
+  activeLanguage: string.isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withSiteData } from 'react-static';
+import { withRouteData } from 'react-static';
 import { object } from 'prop-types';
 import styled from 'styles';
 
@@ -16,14 +16,14 @@ const FooterHolder = styled(FooterBase)`
   background-color: ${({ theme }) => theme.colors.darker};
 `;
 
-export const Footer = withSiteData(({ siteData: { footer } }) => {
+export const Footer = withRouteData(({ sharedData: { footer } }) => {
   return <FooterHolder>{footer.allRightsReservedInfo}</FooterHolder>;
 });
 
 Footer.defaultProps = {
-  siteData: {},
+  sharedData: {},
 };
 
 Footer.propTypes = {
-  siteData: object,
+  sharedData: object,
 };

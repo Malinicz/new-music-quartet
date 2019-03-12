@@ -28,10 +28,13 @@ const photoAnimation = keyframes`
   to { opacity: 1; };
 `;
 
-const Photo = styled.div`
-  background: ${({ image }) => `url(${image})`};
-  background-size: cover;
-  background-position: center;
+const Photo = styled.div.attrs(({ image }) => ({
+  style: {
+    background: `url(${image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
+}))`
   border-radius: 2px;
   width: 100%;
   animation: ${photoAnimation} 1s ease;
@@ -72,20 +75,60 @@ const PrevButton = styled(Button)`
 `;
 
 export class PhotoCarousel extends Component {
+  changeInterval = null;
+  nextChangeTimeout = null;
+
   state = {
     activeIndex: 0,
   };
 
+  componentDidMount() {
+    this.setChangePhotoInterval();
+  }
+
+  componentWillUnmount() {
+    this.clearTimers();
+  }
+
+  setChangePhotoInterval = () => {
+    this.changeInterval = window.setInterval(() => {
+      this.setNextPhoto();
+    }, 10000);
+  };
+
+  clearTimers = () => {
+    window.clearInterval(this.changeInterval);
+    window.clearTimeout(this.nextChangeTimeout);
+  };
+
+  restartChangePhotoInterval = () => {
+    this.nextChangeTimeout = window.setTimeout(() => {
+      this.setChangePhotoInterval();
+    }, 10000);
+  };
+
   onPrevClick = () => {
-    const { activeIndex } = this.state;
-    const prevIndex = activeIndex === 0 ? photos.length - 1 : activeIndex - 1;
-    this.setState({ activeIndex: prevIndex });
+    this.clearTimers();
+    this.setPrevPhoto();
+    this.restartChangePhotoInterval();
   };
 
   onNextClick = () => {
+    this.clearTimers();
+    this.setNextPhoto();
+    this.restartChangePhotoInterval();
+  };
+
+  setNextPhoto = () => {
     const { activeIndex } = this.state;
     const nextIndex = activeIndex === photos.length - 1 ? 0 : activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
+  };
+
+  setPrevPhoto = () => {
+    const { activeIndex } = this.state;
+    const prevIndex = activeIndex === 0 ? photos.length - 1 : activeIndex - 1;
+    this.setState({ activeIndex: prevIndex });
   };
 
   render() {

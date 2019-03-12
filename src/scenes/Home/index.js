@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import { object } from 'prop-types';
 
 import { throttle } from 'utils/helpers';
 
 import { Layout } from 'components';
-import { Intro, Bio, Concerts, Repertoire, Download } from './components';
+import {
+  Intro,
+  Bio,
+  Concerts,
+  Repertoire,
+  Download,
+  Media,
+} from './components';
+import { withRouteData } from 'react-static';
 
-// const pic1 = require('./assets/pic1.jpg');
-// const pic2 = require('./assets/pic2.jpg');
-// const pic3 = require('./assets/pic3.jpg');
-
-export default class Home extends Component {
+class Home extends Component {
   bio = null;
   concerts = null;
   download = null;
@@ -48,24 +53,27 @@ export default class Home extends Component {
         section.config.top < 300 &&
         section.config.bottom > 0
       ) {
-        console.log('setting active section: ', section.name);
         return this.setState({ activeSection: section.name });
       }
     }
   };
 
-  onLanguageSwitch = () => {
-    console.log('switching languages');
+  onLanguageSwitch = (language) => {
+    const { history } = this.props;
+    return language === 'pl' ? history.push('/') : history.push('/en');
   };
 
   render() {
     const { activeSection } = this.state;
+    const {
+      sharedData: { language },
+    } = this.props;
 
     return (
       <Layout>
         <Intro
           handleLanguageSwitch={this.onLanguageSwitch}
-          activeSection={activeSection}
+          activeLanguage={language}
         />
         <Bio
           createRef={this.createRef}
@@ -76,6 +84,7 @@ export default class Home extends Component {
           createRef={this.createRef}
           isActive={activeSection === 'concerts'}
         />
+        <Media />
         <Download
           createRef={this.createRef}
           isActive={activeSection === 'download'}
@@ -88,3 +97,14 @@ export default class Home extends Component {
     );
   }
 }
+
+Home.defaultProps = {
+  sharedData: {},
+};
+
+Home.propTypes = {
+  history: object.isRequired,
+  sharedData: object,
+};
+
+export default withRouteData(Home);

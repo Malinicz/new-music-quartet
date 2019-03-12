@@ -33,7 +33,7 @@ export const Download = withRouteData(({ routeData, createRef, isActive }) => {
   const { title, bio, bioShort, rider, photos } = routeData.download;
 
   return (
-    <StandardSection ref={(el) => createRef('download', el)}>
+    <StandardSection ref={(el) => createRef('download', el)} name={title}>
       <MaxWidthWrapper>
         <StandardSectionMain>
           <SectionHeading>

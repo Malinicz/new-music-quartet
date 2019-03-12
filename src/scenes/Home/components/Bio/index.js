@@ -30,7 +30,7 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
   } = routeData.bio;
 
   return (
-    <StandardSection ref={(el) => createRef('bio', el)}>
+    <StandardSection ref={(el) => createRef('bio', el)} name={title}>
       <MaxWidthWrapper>
         <StandardSectionMain>
           <SectionHeading>

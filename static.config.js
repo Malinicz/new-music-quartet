@@ -4,6 +4,7 @@ import { ServerStyleSheet } from 'styled-components';
 import client from './src/services/contentfulClient';
 
 import pl from './src/data/pl';
+import en from './src/data/en';
 
 const siteRoot = 'https://atma.netlify.com';
 const stagingSiteRoot = 'https://staging-atma.netlify.com';
@@ -15,9 +16,6 @@ export default {
   stagingSiteRoot,
   basePath,
   stagingBasePath,
-  getSiteData: async () => ({
-    siteData: pl.shared,
-  }),
   getRoutes: async () => {
     return [
       {
@@ -25,7 +23,17 @@ export default {
         component: 'src/scenes/Home',
         getData: () => ({
           routeData: pl.home,
+          sharedData: pl.shared,
           canonicalUrl: `${siteRoot}/`,
+        }),
+      },
+      {
+        path: '/en',
+        component: 'src/scenes/Home',
+        getData: () => ({
+          routeData: en.home,
+          sharedData: en.shared,
+          canonicalUrl: `${siteRoot}/en`,
         }),
       },
       {
@@ -51,7 +59,7 @@ export default {
       return (
         <Html>
           <Head>
-            <title>New Music Quartet</title>
+            <title>Atma Quartet</title>
             <meta charSet="UTF-8" />
             <meta
               name="viewport"

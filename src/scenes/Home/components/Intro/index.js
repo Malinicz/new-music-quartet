@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styles';
-import { func } from 'prop-types';
+import { func, string } from 'prop-types';
 
 import { Section } from 'components/base';
 import { LanguageSwitch } from './LanguageSwitch';
@@ -23,16 +23,20 @@ const Logo = styled.img`
   width: 300px;
 `;
 
-export const Intro = ({ handleLanguageSwitch }) => {
+export const Intro = ({ handleLanguageSwitch, activeLanguage }) => {
   return (
     <IntroHolder>
       <PhotoCarousel />
       <Logo src={logo} />
-      <LanguageSwitch handleLanguageSwitch={handleLanguageSwitch} />
+      <LanguageSwitch
+        handleLanguageSwitch={handleLanguageSwitch}
+        activeLanguage={activeLanguage}
+      />
     </IntroHolder>
   );
 };
 
 Intro.propTypes = {
   handleLanguageSwitch: func.isRequired,
+  activeLanguage: string.isRequired,
 };

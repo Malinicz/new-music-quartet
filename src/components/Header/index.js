@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { withSiteData } from 'react-static';
+import { withRouteData } from 'react-static';
 import { object } from 'prop-types';
 import styled, { keyframes } from 'styles';
 import { getRgba } from 'styles/helpers';
 
 import { Section } from 'components/base';
 import { MenuBox } from './MenuBox';
+
+import { Link } from 'react-scroll';
 
 const HeaderHolder = styled(Section.withComponent('header'))`
   position: fixed;
@@ -47,7 +49,7 @@ const MenuItemsHolder = styled.div`
   animation-fill-mode: forwards;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   padding: 10px;
   transition: 0.3s ease all;
   font-size: 0.9em;
@@ -70,7 +72,7 @@ class HeaderComp extends Component {
   render() {
     const { isMenuVisible } = this.state;
     const {
-      siteData: { navigation },
+      sharedData: { navigation },
     } = this.props;
 
     return (
@@ -79,7 +81,14 @@ class HeaderComp extends Component {
         {isMenuVisible && (
           <MenuItemsHolder>
             {Object.values(navigation).map((navItem) => (
-              <MenuItem key={navItem.id}>{navItem.label}</MenuItem>
+              <MenuItem
+                key={navItem.id}
+                to={navItem.slug}
+                smooth
+                spy
+                onClick={this.toggleMenu}>
+                {navItem.label}
+              </MenuItem>
             ))}
           </MenuItemsHolder>
         )}
@@ -89,11 +98,11 @@ class HeaderComp extends Component {
 }
 
 HeaderComp.defaultProps = {
-  siteData: {},
+  sharedData: {},
 };
 
 HeaderComp.propTypes = {
-  siteData: object,
+  sharedData: object,
 };
 
-export const Header = withSiteData(HeaderComp);
+export const Header = withRouteData(HeaderComp);

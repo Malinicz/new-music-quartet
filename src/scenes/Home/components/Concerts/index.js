@@ -28,7 +28,7 @@ export const Concerts = withRouteData(({ routeData, createRef, isActive }) => {
   } = routeData.concerts;
 
   return (
-    <StandardSection ref={(el) => createRef('concerts', el)}>
+    <StandardSection ref={(el) => createRef('concerts', el)} name={title}>
       <MaxWidthWrapper flexDirection="row-reverse">
         <StandardSectionMain>
           <SectionHeading>

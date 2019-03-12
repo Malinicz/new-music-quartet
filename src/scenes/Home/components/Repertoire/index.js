@@ -48,11 +48,11 @@ export const Repertoire = withRouteData(
       list,
     } = routeData.repertoire;
 
-    const firstColumn = list.slice(0, 6);
-    const secondColumn = list.slice(6);
+    const firstColumn = list.slice(0, 5);
+    const secondColumn = list.slice(5);
 
     return (
-      <StandardSection ref={(el) => createRef('repertoire', el)}>
+      <StandardSection ref={(el) => createRef('repertoire', el)} name={title}>
         <MaxWidthWrapper flexDirection="row-reverse">
           <StandardSectionMain>
             <SectionHeading>

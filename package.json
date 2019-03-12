@@ -17,6 +17,7 @@
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.3.3",
     "react-router": "^4.2.0",
+    "react-scroll": "^1.7.11",
     "react-static": "^5.9.7",
     "react-static-routes": "^1.0.0",
     "styled-components": "^4.1.3"
