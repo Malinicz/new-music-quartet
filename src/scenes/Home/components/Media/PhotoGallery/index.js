@@ -77,11 +77,7 @@ export class PhotoGallery extends Component {
       <PhotoGalleryHolder>
         <CenterPoint>
           {photos.map((photo, index) => (
-            <a
-              key={`${photo.image}-${index}`}
-              href={photo.fullImage}
-              target="_blank"
-              rel="noopener noreferrer">
+            <a key={`${photo.image}-${index}`} href={photo.fullImage}>
               <Photo
                 image={photo.image}
                 rotate={photo.rotate}
