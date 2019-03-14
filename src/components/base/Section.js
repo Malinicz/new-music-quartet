@@ -116,3 +116,31 @@ export const SectionAsideBottom = styled.div`
     justify-content: flex-start;
   }
 `;
+
+export const SinglePageSectionMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 730px;
+  margin: 70px auto 50px auto;
+  position: relative;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    margin: 50px auto;
+  }
+`;
+
+export const SinglePageSectionPhoto = styled.img`
+  width: 100%;
+`;
+
+export const SinglePageSectionHeading = styled(SectionHeading)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    left: 15px;
+  }
+`;
+
+export const SinglePageSectionContent = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+    padding: 15px;
+  }
+`;

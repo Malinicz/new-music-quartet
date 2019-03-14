@@ -7,6 +7,7 @@ export default {
     paragraph2:
       'Zespół zdobył I nagrodę i trzy nagrody specjalne w Międzynarodowym Konkursie Kwartetów Smyczkowych im. Karola Szymanowskiego w Katowicach (2017), Förderpreis i Bärenreiter Urtext Preis podczas Internationaler Wettbewerb „Franz Schubert und die Musik der Moderne” w Grazu (2018) oraz III nagrodę w Międzynarodowym Konkursie Muzycznym im. Karola Szymanowskiego w Katowicach (2018). Dwukrotnie został wyróżniony stypendium Prezydenta Miasta Bydgoszczy. Ãtma Quartet jest laureatem programu stypendialnego Ministra Kultury i Dziedzictwa Narodowego „Młoda Polska" (2018), który umożliwił realizację płyty z dziełami kompozytorów polskich.',
     moreContentButtonLabel: 'Przeczytaj więcej',
+    moreContentButtonLink: '/biografia',
   },
   concerts: {
     title: 'Koncerty',

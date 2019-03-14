@@ -6,11 +6,12 @@ import { Section } from 'components/base';
 import { LanguageSwitch } from './LanguageSwitch';
 import { PhotoCarousel } from './PhotoCarousel';
 
-import logo from './assets/logo-black.svg';
+import logo from 'assets/logo-black.svg';
 
 const IntroHolder = styled(Section)`
   max-width: 100%;
   height: 100vh;
+  min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.darker};
   align-items: flex-start;
 `;

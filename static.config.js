@@ -28,6 +28,15 @@ export default {
         }),
       },
       {
+        path: '/biografia',
+        component: 'src/scenes/Bio',
+        getData: () => ({
+          routeData: pl.bio,
+          sharedData: pl.shared,
+          canonicalUrl: `${siteRoot}/biografia`,
+        }),
+      },
+      {
         path: '/en',
         component: 'src/scenes/Home',
         getData: () => ({

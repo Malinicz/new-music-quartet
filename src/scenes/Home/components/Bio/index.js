@@ -52,7 +52,10 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
             </BackgroundLetter>
           </SectionAsideTop>
           <SectionAsideBottom>
-            <MoreContentButton label={moreContentButtonLabel} />
+            <MoreContentButton
+              href="/biografia"
+              label={moreContentButtonLabel}
+            />
           </SectionAsideBottom>
         </StandardSectionAside>
       </MaxWidthWrapper>
