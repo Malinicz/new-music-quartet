@@ -40,4 +40,21 @@ export default {
   media: {
     title: 'Media',
   },
+  discography: {
+    title: 'Dyskografia',
+    backgroundLetter: 'D',
+    moreContentButtonLabel: 'Zobacz wszystkie',
+  },
+  contact: {
+    title: 'Kontakt',
+    backgroundLetter: 'K',
+    formLabelName: 'imię',
+    formLabelDescription: 'wiadomość',
+    formSubmitButtonLabel: 'wyślij',
+  },
+  projects: {
+    title: 'Projekty',
+    backgroundLetter: 'P',
+    moreContentButtonLabel: 'Zobacz wszystkie',
+  },
 };
