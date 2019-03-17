@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ServerStyleSheet } from 'styled-components';
+import moment from 'moment';
 
 import client from './src/services/contentfulClient';
 
@@ -17,6 +18,19 @@ export default {
   basePath,
   stagingBasePath,
   getRoutes: async () => {
+    const contentfulData = await client.getEntries();
+    const concertsList = contentfulData.items
+      .filter(
+        (item) =>
+          item.fields.category &&
+          item.fields.category.fields.name === 'concerts'
+      )
+      .map((entry) => ({ ...entry.fields }))
+      .sort(
+        (a, b) =>
+          moment(a.date).format('YYYYMMDD') - moment(b.date).format('YYYYMMDD')
+      );
+
     return [
       {
         path: '/',
@@ -24,6 +38,7 @@ export default {
         getData: () => ({
           routeData: pl.home,
           sharedData: pl.shared,
+          concerts: concertsList,
           canonicalUrl: `${siteRoot}/`,
         }),
       },
@@ -37,12 +52,32 @@ export default {
         }),
       },
       {
+        path: '/dyskografia',
+        component: 'src/scenes/Discography',
+        getData: () => ({
+          routeData: pl.discography,
+          sharedData: pl.shared,
+          canonicalUrl: `${siteRoot}/dyskografia`,
+        }),
+      },
+      {
         path: '/en',
         component: 'src/scenes/Home',
         getData: () => ({
           routeData: en.home,
           sharedData: en.shared,
+          concerts: concertsList,
           canonicalUrl: `${siteRoot}/en`,
+        }),
+      },
+      {
+        path: '/koncerty',
+        component: 'src/scenes/Concerts',
+        getData: () => ({
+          routeData: pl.concerts,
+          sharedData: pl.shared,
+          concerts: concertsList,
+          canonicalUrl: `${siteRoot}/koncerty`,
         }),
       },
       {

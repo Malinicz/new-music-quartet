@@ -4,3 +4,6 @@ export * from './Concerts';
 export * from './Repertoire';
 export * from './Download';
 export * from './Media';
+export * from './Discography';
+export * from './Contact';
+export * from './Projects';

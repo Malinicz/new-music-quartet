@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, object } from 'prop-types';
 import { Head, withRouteData } from 'react-static';
 import styled from 'styles';
 
@@ -63,30 +63,34 @@ const Logo = styled.img`
   width: 1500px;
 `;
 
-export const SinglePageLayout = withRouteData(({ children, canonicalUrl }) => {
-  return (
-    <SinglePageLayoutHolder>
-      <Head>
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
-      <Header>
-        <HeaderTopStripe>
-          <Logo src={logo} />
-        </HeaderTopStripe>
-        <BackButton href="/">
-          <IconHolder>
-            <Icon name="arrowRight" size={20} />
-          </IconHolder>
-          powrót
-        </BackButton>
-      </Header>
-      <Main>{children}</Main>
-      <Footer />
-    </SinglePageLayoutHolder>
-  );
-});
+export const SinglePageLayout = withRouteData(
+  ({ children, canonicalUrl, history, language }) => {
+    return (
+      <SinglePageLayoutHolder>
+        <Head>
+          <link rel="canonical" href={canonicalUrl} />
+        </Head>
+        <Header>
+          <HeaderTopStripe>
+            <Logo src={logo} />
+          </HeaderTopStripe>
+          <BackButton onClick={history.goBack}>
+            <IconHolder>
+              <Icon name="arrowRight" size={20} />
+            </IconHolder>
+            {language === 'pl' ? 'Powrót' : 'Back'}
+          </BackButton>
+        </Header>
+        <Main>{children}</Main>
+        <Footer />
+      </SinglePageLayoutHolder>
+    );
+  }
+);
 
 SinglePageLayout.propTypes = {
   children: node.isRequired,
+  history: object.isRequired,
+  language: string.isRequired,
   canonicalUrl: string,
 };

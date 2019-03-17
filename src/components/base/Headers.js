@@ -16,3 +16,11 @@ export const H2 = styled.h2`
     text-align: center;
   }
 `;
+
+export const H3 = styled.h3`
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+    text-align: center;
+  }
+`;

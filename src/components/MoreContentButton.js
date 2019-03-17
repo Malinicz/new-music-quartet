@@ -35,9 +35,12 @@ const MoreContentButtonHolder = styled.a`
   }
 `;
 
-export const MoreContentButton = ({ label, href }) => {
+export const MoreContentButton = ({ label, href, target = '_self' }) => {
   return (
-    <MoreContentButtonHolder href={href}>
+    <MoreContentButtonHolder
+      href={href}
+      target={target}
+      rel="noopener noreferrer">
       <Label>{label}</Label>
       <IconHolder>
         <Icon name="arrowRight" size={25} />
@@ -46,7 +49,12 @@ export const MoreContentButton = ({ label, href }) => {
   );
 };
 
+MoreContentButton.defaultProps = {
+  target: '_self',
+};
+
 MoreContentButton.propTypes = {
   label: string.isRequired,
   href: string.isRequired,
+  target: string,
 };

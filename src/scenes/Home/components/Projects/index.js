@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouteData } from 'react-static';
-import { object } from 'prop-types';
+import { object, arrayOf } from 'prop-types';
 
 import {
   StandardSection,
@@ -13,48 +13,42 @@ import {
   SectionAsideTop,
   SectionAsideBottom,
   BackgroundLetter,
-  Paragraph,
   MaxWidthWrapper,
 } from 'components/base';
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
 
-import image from 'assets/bio.jpg';
+import image from './projects.jpg';
 
-export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
+export const Projects = withRouteData(({ routeData, createRef, isActive }) => {
   const {
     title,
-    paragraph1,
-    paragraph2,
     backgroundLetter,
     moreContentButtonLabel,
-  } = routeData.bio;
+  } = routeData.projects;
 
   return (
-    <StandardSection ref={(el) => createRef('bio', el)} name={title}>
-      <MaxWidthWrapper>
+    <StandardSection ref={(el) => createRef('projects', el)} name={title}>
+      <MaxWidthWrapper flexDirection="row-reverse">
         <StandardSectionMain>
           <SectionHeading>
             {title} <SectionHeadingLine />
           </SectionHeading>
           <SectionImage>
             <AnimatedPhoto image={image} isActive={isActive} />
-            <CrossElement />
+            <CrossElement left />
           </SectionImage>
-          <SectionContent>
-            <Paragraph>{paragraph1}</Paragraph>
-            <Paragraph style={{ marginBottom: '50px' }}>{paragraph2}</Paragraph>
-          </SectionContent>
+          <SectionContent>Projekty</SectionContent>
         </StandardSectionMain>
         <StandardSectionAside>
           <SectionAsideTop>
-            <BackgroundLetter x={-200} y={-250} isActive={isActive}>
+            <BackgroundLetter x={0} y={50} isActive={isActive}>
               {backgroundLetter}
             </BackgroundLetter>
           </SectionAsideTop>
           <SectionAsideBottom>
             <MoreContentButton
-              href="/biografia"
               label={moreContentButtonLabel}
+              href="/projekty"
             />
           </SectionAsideBottom>
         </StandardSectionAside>
@@ -63,10 +57,14 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
   );
 });
 
-Bio.defaultProps = {
+Projects.defaultProps = {
   routeData: {},
+  sharedData: {},
+  concerts: [],
 };
 
-Bio.propTypes = {
+Projects.propTypes = {
   routeData: object,
+  sharedData: object,
+  concerts: arrayOf(object),
 };

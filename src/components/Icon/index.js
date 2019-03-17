@@ -1,12 +1,13 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 import styled from 'styles';
-import { MailIcon, ArrowRightIcon, Document } from './svgIcons';
+import { MailIcon, ArrowRightIcon, Document, CheckMarkIcon } from './svgIcons';
 
 const icons = {
   mail: <MailIcon />,
   arrowRight: <ArrowRightIcon />,
   document: <Document />,
+  checkmark: <CheckMarkIcon />,
 };
 
 const IconHolder = styled.div`

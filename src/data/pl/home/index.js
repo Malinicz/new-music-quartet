@@ -13,6 +13,8 @@ export default {
     title: 'Koncerty',
     backgroundLetter: 'K',
     moreContentButtonLabel: 'Pokaż wszystkie',
+    eventDetailsText: 'Szczegóły',
+    eventTimePrefix: 'Rozpoczęcie',
   },
   repertoire: {
     title: 'Repertuar',
@@ -30,6 +32,11 @@ export default {
       'K. Penderecki – Kwartet smyczkowy „Kartki z niezapisanego dziennika” [18’]',
     ],
   },
+  discography: {
+    title: 'Dyskografia',
+    backgroundLetter: 'D',
+    moreContentButtonLabel: 'Zobacz wszystkie',
+  },
   download: {
     title: 'Do pobrania',
     backgroundLetter: 'D',
@@ -40,5 +47,17 @@ export default {
   },
   media: {
     title: 'Media',
+  },
+  contact: {
+    title: 'Kontakt',
+    backgroundLetter: 'K',
+    formLabelName: 'imię',
+    formLabelDescription: 'wiadomość',
+    formSubmitButtonLabel: 'wyślij',
+  },
+  projects: {
+    title: 'Projekty',
+    backgroundLetter: 'P',
+    moreContentButtonLabel: 'Zobacz wszystkie',
   },
 };

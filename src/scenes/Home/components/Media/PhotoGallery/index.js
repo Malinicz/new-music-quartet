@@ -51,14 +51,15 @@ const Photo = styled.div`
   background-position: center;
   width: 300%;
   height: 300%;
-  border: 15px solid white;
   border-radius: 2px;
-  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 45px 10px rgba(0, 0, 0, 0.2);
+    transform: ${({ rotate, scale }) =>
+      `rotate(${rotate}deg) scale(${scale + 0.02})`};
   }
 
   &:active {

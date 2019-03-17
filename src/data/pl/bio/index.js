@@ -7,4 +7,21 @@ export default {
     'Ãtma Quartet wystąpił na wielu znaczących festiwalach, takich jak m.in. Davos Festival (Szwajcaria), Quatuors à Bordeaux, Festival des Musiques d’Eté du Château de Lourmarin (Francja), Zeist Music Days (Holandia), Musethica (Hiszpania), Dni Muzyki Karola Szymanowskiego w Zakopanem, Emanacje w Lusławicach, Międzynarodowy Festiwal Młodych Laureatów Konkursów Muzycznych, Muzyka u Źródeł, Muzyka w willi Blumwego, Festiwal Muzyki Kameralnej w Urlach, Spotkania „Oko nigdy nie śpi”, Fonomo Music & Film Festival, Sztuka w Gryfie, Bydgoski Festiwal Nauki (Polska).',
     'Od 2018 roku zespół bierze udział w projekcie Le Dimore del Quartetto, w ramach którego popularyzuje muzykę polską we Włoszech. Uczestniczy również we francuskim programie ProQuartet, wspierającym muzykę kameralną na świecie.',
   ],
+  backUrl: '/#biografia',
+  katarzyna: {
+    name: 'Katarzyna Gluza',
+    instrument: 'skrzypce',
+  },
+  paulina: {
+    name: 'Paulina Marcisz',
+    instrument: 'skrzypce',
+  },
+  karolina: {
+    name: 'Karolina Orsik-Sauter',
+    instrument: 'altówka',
+  },
+  dominika: {
+    name: 'Dominika Szczypka',
+    instrument: 'wiolonczela',
+  },
 };

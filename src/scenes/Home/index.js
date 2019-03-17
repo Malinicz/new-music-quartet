@@ -11,6 +11,9 @@ import {
   Repertoire,
   Download,
   Media,
+  Discography,
+  Contact,
+  Projects,
 } from './components';
 import { withRouteData } from 'react-static';
 
@@ -19,6 +22,8 @@ class Home extends Component {
   concerts = null;
   download = null;
   repertoire = null;
+  projects = null;
+  contact = null;
 
   state = {
     activeSection: '',
@@ -45,6 +50,8 @@ class Home extends Component {
       { name: 'concerts', config: this.concerts.getBoundingClientRect() },
       { name: 'download', config: this.download.getBoundingClientRect() },
       { name: 'repertoire', config: this.repertoire.getBoundingClientRect() },
+      { name: 'projects', config: this.projects.getBoundingClientRect() },
+      { name: 'contact', config: this.contact.getBoundingClientRect() },
     ];
 
     for (const section of sectionsTopValue) {
@@ -85,6 +92,14 @@ class Home extends Component {
           isActive={activeSection === 'concerts'}
         />
         <Media />
+        <Discography
+          createRef={this.createRef}
+          isActive={activeSection === 'discography'}
+        />
+        <Projects
+          createRef={this.createRef}
+          isActive={activeSection === 'projects'}
+        />
         <Download
           createRef={this.createRef}
           isActive={activeSection === 'download'}
@@ -92,6 +107,10 @@ class Home extends Component {
         <Repertoire
           createRef={this.createRef}
           isActive={activeSection === 'repertoire'}
+        />
+        <Contact
+          createRef={this.createRef}
+          isActive={activeSection === 'contact'}
         />
       </Layout>
     );

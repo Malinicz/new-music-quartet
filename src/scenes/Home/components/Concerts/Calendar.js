@@ -1,4 +1,5 @@
 import React from 'react';
+import { arrayOf, object, string } from 'prop-types';
 import styled from 'styles';
 
 import { ButtonLink } from 'components';
@@ -34,27 +35,24 @@ const CalendarItemTime = styled.div`
   margin-bottom: 15px;
 `;
 
-const CalendarItemTickets = styled.div`
-  margin-bottom: 15px;
-`;
-
-export const Calendar = () => {
+export const Calendar = ({ calendarEvents = [], linkLabel }) => {
   return (
     <CalendarHolder>
-      <CalendarItem>
-        <CalendarItemTitle>9 stycznia 2020</CalendarItemTitle>
-        <CalendarItemPlace>Kraków - Tauron Arena</CalendarItemPlace>
-        <CalendarItemTime>Rozpoczęcie 19:00</CalendarItemTime>
-        <CalendarItemTickets>Bilety 35zł / 40zł</CalendarItemTickets>
-        <ButtonLink label="kup bilety" />
-      </CalendarItem>
-      <CalendarItem>
-        <CalendarItemTitle>19 lutego 2020</CalendarItemTitle>
-        <CalendarItemPlace>Warszawa - Sala Kongresowa</CalendarItemPlace>
-        <CalendarItemTime>Rozpoczęcie 20:00</CalendarItemTime>
-        <CalendarItemTickets>Bilety 40zł / 60zł</CalendarItemTickets>
-        <ButtonLink label="kup bilety" />
-      </CalendarItem>
+      {calendarEvents.map((event) => {
+        return (
+          <CalendarItem key={`${event.date}-${event.time}`}>
+            <CalendarItemTitle>{event.date}</CalendarItemTitle>
+            <CalendarItemPlace>{event.place}</CalendarItemPlace>
+            <CalendarItemTime>{event.time}</CalendarItemTime>
+            <ButtonLink label={linkLabel} href={event.url} target="_blank" />
+          </CalendarItem>
+        );
+      })}
     </CalendarHolder>
   );
+};
+
+Calendar.propTypes = {
+  calendarEvents: arrayOf(object).isRequired,
+  linkLabel: string.isRequired,
 };
