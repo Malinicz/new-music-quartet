@@ -18,7 +18,7 @@ import bio from 'assets/bio.jpg';
 
 import katarzynaPhoto from 'assets/katarzyna.jpg';
 import paulinaPhoto from 'assets/paulina.jpg';
-import karolinaPhoto from 'assets/karolina.jpg';
+import karalinaPhoto from 'assets/karalina.jpg';
 import dominikaPhoto from 'assets/dominika.jpg';
 
 const TeamPhotosHolder = styled.div`
@@ -54,7 +54,7 @@ class Bio extends Component {
   render() {
     const {
       sharedData: { language },
-      routeData: { title, paragraphs, katarzyna, dominika, paulina, karolina },
+      routeData: { title, paragraphs, katarzyna, dominika, paulina, karalina },
       history,
     } = this.props;
 
@@ -83,9 +83,9 @@ class Bio extends Component {
                   <PersonInstrument>{paulina.instrument}</PersonInstrument>
                 </PersonHolder>
                 <PersonHolder>
-                  <PersonPhoto src={karolinaPhoto} />
-                  <PersonName>{karolina.name}</PersonName>
-                  <PersonInstrument>{karolina.instrument}</PersonInstrument>
+                  <PersonPhoto src={karalinaPhoto} />
+                  <PersonName>{karalina.name}</PersonName>
+                  <PersonInstrument>{karalina.instrument}</PersonInstrument>
                 </PersonHolder>
                 <PersonHolder>
                   <PersonPhoto src={dominikaPhoto} />

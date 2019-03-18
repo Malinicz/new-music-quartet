@@ -68,7 +68,6 @@ const Photo = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
     display: ${({ desktopOnly }) => (desktopOnly ? 'none' : 'block')};
-    border: 10px solid white;
   }
 `;
 

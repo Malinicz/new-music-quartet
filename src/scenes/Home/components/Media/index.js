@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouteData } from 'react-static';
-import { object } from 'prop-types';
+import { object, arrayOf } from 'prop-types';
 
 import {
   StandardSection,
@@ -10,8 +10,9 @@ import {
   MaxWidthWrapper,
 } from 'components/base';
 import { PhotoGallery } from './PhotoGallery';
+import { VideoGallery } from './VideoGallery';
 
-export const Media = withRouteData(({ routeData }) => {
+export const Media = withRouteData(({ routeData, videos }) => {
   const { title } = routeData.media;
 
   return (
@@ -22,6 +23,7 @@ export const Media = withRouteData(({ routeData }) => {
             {title} <SectionHeadingLine />
           </SectionHeading>
           <PhotoGallery />
+          <VideoGallery videos={videos} />
         </StandardSectionMain>
       </MaxWidthWrapper>
     </StandardSection>
@@ -30,8 +32,10 @@ export const Media = withRouteData(({ routeData }) => {
 
 Media.defaultProps = {
   routeData: {},
+  videos: [],
 };
 
 Media.propTypes = {
   routeData: object,
+  videos: arrayOf(object),
 };

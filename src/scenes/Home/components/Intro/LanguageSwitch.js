@@ -37,7 +37,6 @@ export const LanguageSwitch = ({ handleLanguageSwitch, activeLanguage }) => {
     <LanguageSwitchHolder>
       {['pl', 'en'].map((language) => {
         const isActive = language === activeLanguage;
-        console.log('activeLanguage: ', activeLanguage);
 
         return (
           <LanguageCell

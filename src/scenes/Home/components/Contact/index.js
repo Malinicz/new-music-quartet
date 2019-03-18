@@ -25,7 +25,7 @@ import {
 } from 'components/base';
 import { CrossElement, AnimatedPhoto, Icon } from 'components';
 
-import image from './contact.jpg';
+import image from 'assets/contact.jpg';
 
 const PhoneNumbers = styled.div`
   display: flex;
@@ -42,11 +42,20 @@ const Phone = styled.a`
   padding: 5px 0;
 `;
 
-const SubmitButton = styled.div`
+const SubmitButton = styled.button`
+  display: flex;
+  width: 100px;
+  height: 40px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.secondaryFontFamily};
+  background: transparent;
   font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const IconHolder = styled.div`
@@ -101,6 +110,7 @@ class ContactComp extends Component {
     const {
       createRef,
       isActive,
+      sharedData: { language },
       routeData: {
         contact: {
           title,
@@ -129,7 +139,9 @@ class ContactComp extends Component {
                 <Phone href="tel:+48 692 666 146">+48 692 666 146</Phone>
               </PhoneNumbers>
               <Title style={{ paddingTop: '60px' }}>Napisz</Title>
-              <Form action="https://formspree.io/#" method="POST">
+              <Form
+                action="https://formspree.io/atmaquartet@gmail.com"
+                method="POST">
                 <InputsRow>
                   <StyledInputGroup>
                     <InputLabel htmlFor="email">email *</InputLabel>
@@ -176,15 +188,15 @@ class ContactComp extends Component {
                     }
                   />
                 </InputGroup>
-                <input type="hidden" name="_next" value="/submission-success" />
+                <input type="hidden" name="_next" value="/wiadomosc-wyslana" />
                 <input
                   type="hidden"
                   name="_subject"
-                  value="[FOTONAPRAWA.PL] Zapytanie"
+                  value="[ATMA QUARTET] Nowa wiadomość"
                 />
                 <input type="hidden" name="_format" value="plain" />
-                <input type="hidden" name="_language" value="pl" />
-                <SubmitButton disabled={!email || !description}>
+                <input type="hidden" name="_language" value={language} />
+                <SubmitButton disabled={!email || !description} type="submit">
                   Wyślij
                 </SubmitButton>
               </Form>
@@ -206,10 +218,12 @@ class ContactComp extends Component {
 
 ContactComp.defaultProps = {
   routeData: {},
+  sharedData: {},
 };
 
 ContactComp.propTypes = {
   routeData: object,
+  sharedData: object,
   createRef: func.isRequired,
   isActive: bool.isRequired,
 };

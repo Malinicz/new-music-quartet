@@ -49,6 +49,11 @@ const CustomAside = styled(StandardSectionAside)`
   padding: 15px;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+    align-items: flex-start;
+    padding: 15px 0;
+  }
 `;
 
 export const Discography = withRouteData(({ routeData }) => {

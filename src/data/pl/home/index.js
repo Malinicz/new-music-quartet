@@ -58,6 +58,6 @@ export default {
   projects: {
     title: 'Projekty',
     backgroundLetter: 'P',
-    moreContentButtonLabel: 'Zobacz wszystkie',
+    moreContentButtonLabel: 'Pokaż szczegóły',
   },
 };

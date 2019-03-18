@@ -84,9 +84,7 @@ export const Repertoire = withRouteData(
                 {backgroundLetter}
               </BackgroundLetter>
             </SectionAsideTop>
-            <SectionAsideBottom>
-              <MoreContentButton label={moreContentButtonLabel} />
-            </SectionAsideBottom>
+            <SectionAsideBottom />
           </StandardSectionAside>
         </MaxWidthWrapper>
       </StandardSection>

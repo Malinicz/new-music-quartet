@@ -7,3 +7,4 @@ export * from './MoreContentButton';
 export * from './CrossElement';
 export * from './AnimatedPhoto';
 export * from './ButtonLink';
+export * from './Video';

@@ -16,8 +16,8 @@ export default {
     name: 'Paulina Marcisz',
     instrument: 'skrzypce',
   },
-  karolina: {
-    name: 'Karolina Orsik-Sauter',
+  karalina: {
+    name: 'Karalina Orsik-Sauter',
     instrument: 'altówka',
   },
   dominika: {

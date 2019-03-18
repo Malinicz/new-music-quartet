@@ -31,6 +31,33 @@ export default {
           moment(a.date).format('YYYYMMDD') - moment(b.date).format('YYYYMMDD')
       );
 
+    const videosList = contentfulData.items
+      .filter(
+        (item) =>
+          item.fields.category && item.fields.category.fields.name === 'videos'
+      )
+      .map((entry) => ({ ...entry.fields }));
+
+    const projectsListPl = contentfulData.items
+      .filter(
+        (item) =>
+          item.fields.category &&
+          item.fields.category.fields.name === 'projects'
+      )
+      .map((entry) => ({ ...entry.fields }));
+
+    const projectsListEn = contentfulData.items
+      .filter(
+        (item) =>
+          item.fields.category &&
+          item.fields.category.fields.name === 'projects'
+      )
+      .map((entry) => ({
+        ...entry.fields,
+        title: entry.fields.titleEn,
+        description: entry.fields.descriptionEn,
+      }));
+
     return [
       {
         path: '/',
@@ -39,7 +66,21 @@ export default {
           routeData: pl.home,
           sharedData: pl.shared,
           concerts: concertsList,
+          videos: videosList,
+          projects: projectsListPl,
           canonicalUrl: `${siteRoot}/`,
+        }),
+      },
+      {
+        path: '/en',
+        component: 'src/scenes/Home',
+        getData: () => ({
+          routeData: en.home,
+          sharedData: en.shared,
+          concerts: concertsList,
+          videos: videosList,
+          projects: projectsListEn,
+          canonicalUrl: `${siteRoot}/en`,
         }),
       },
       {
@@ -61,16 +102,6 @@ export default {
         }),
       },
       {
-        path: '/en',
-        component: 'src/scenes/Home',
-        getData: () => ({
-          routeData: en.home,
-          sharedData: en.shared,
-          concerts: concertsList,
-          canonicalUrl: `${siteRoot}/en`,
-        }),
-      },
-      {
         path: '/koncerty',
         component: 'src/scenes/Concerts',
         getData: () => ({
@@ -81,8 +112,23 @@ export default {
         }),
       },
       {
-        path: '/submission-success',
+        path: '/projekty',
+        component: 'src/scenes/Projects',
+        getData: () => ({
+          routeData: pl.projects,
+          sharedData: pl.shared,
+          projects: projectsListPl,
+          canonicalUrl: `${siteRoot}/projekty`,
+        }),
+      },
+      {
+        path: '/wiadomosc-wyslana',
         component: 'src/scenes/MailSubmissionSuccess',
+        getData: () => ({
+          sharedData: pl.shared,
+          routeData: pl.mailSubmissionSuccess,
+          canonicalUrl: `${siteRoot}/wiadomosc-wyslana`,
+        }),
       },
       {
         is404: true,
