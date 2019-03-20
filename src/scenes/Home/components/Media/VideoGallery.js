@@ -23,8 +23,8 @@ export class VideoGallery extends Component {
 
     return (
       <VideoGalleryHolder>
-        {videos.map((video) => {
-          return <Video url={video.url} />;
+        {videos.map((video, index) => {
+          return <Video key={index} url={video.url} />;
         })}
       </VideoGalleryHolder>
     );

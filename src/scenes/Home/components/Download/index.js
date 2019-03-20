@@ -19,7 +19,7 @@ import { CrossElement, AnimatedPhoto, Icon } from 'components';
 
 import image from './main.jpg';
 
-const DownloadItem = styled.div`
+const DownloadItem = styled.a`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -30,7 +30,17 @@ const DownloadItem = styled.div`
 `;
 
 export const Download = withRouteData(({ routeData, createRef, isActive }) => {
-  const { title, bio, bioShort, rider, photos } = routeData.download;
+  const {
+    title,
+    bio,
+    bioLink,
+    bioShort,
+    bioShortLink,
+    rider,
+    riderLink,
+    photos,
+    photosLink,
+  } = routeData.download;
 
   return (
     <StandardSection ref={(el) => createRef('download', el)} name={title}>
@@ -47,19 +57,31 @@ export const Download = withRouteData(({ routeData, createRef, isActive }) => {
         </StandardSectionMain>
         <StandardSectionAside>
           <SectionAsideTop>
-            <DownloadItem>
+            <DownloadItem
+              href={bioLink}
+              target="_blank"
+              rel="noopener noreferrer">
               <Icon name="document" size={25} marginRight={10} />
               {bio}
             </DownloadItem>
-            <DownloadItem>
+            <DownloadItem
+              href={bioShortLink}
+              target="_blank"
+              rel="noopener noreferrer">
               <Icon name="document" size={25} marginRight={10} />
               {bioShort}
             </DownloadItem>
-            <DownloadItem>
+            <DownloadItem
+              href={riderLink}
+              target="_blank"
+              rel="noopener noreferrer">
               <Icon name="document" size={25} marginRight={10} />
               {rider}
             </DownloadItem>
-            <DownloadItem>
+            <DownloadItem
+              href={photosLink}
+              target="_blank"
+              rel="noopener noreferrer">
               <Icon name="document" size={25} marginRight={10} />
               {photos}
             </DownloadItem>

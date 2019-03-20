@@ -14,7 +14,6 @@ import {
 import { MoreContentButton } from 'components';
 
 import albumPhoto from 'assets/discography/albumPhoto.jpg';
-import albumPhotoBack from 'assets/discography/albumPhotoBack.jpg';
 
 const AlbumPhotoWrapper = styled.div`
   position: relative;
@@ -32,19 +31,6 @@ const AlbumPhoto = styled.img`
   }
 `;
 
-const AlbumPhotoBack = styled.img`
-  position: absolute;
-  z-index: 2;
-  width: 70%;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
-    display: none;
-  }
-`;
-
 const CustomAside = styled(StandardSectionAside)`
   padding: 15px;
   justify-content: center;
@@ -57,7 +43,11 @@ const CustomAside = styled(StandardSectionAside)`
 `;
 
 export const Discography = withRouteData(({ routeData }) => {
-  const { title, moreContentButtonLabel } = routeData.discography;
+  const {
+    title,
+    moreContentButtonLabel,
+    moreContentButtonLink,
+  } = routeData.discography;
 
   return (
     <StandardSection name={title}>
@@ -68,13 +58,12 @@ export const Discography = withRouteData(({ routeData }) => {
           </SectionHeading>
           <AlbumPhotoWrapper>
             <AlbumPhoto src={albumPhoto} />
-            <AlbumPhotoBack src={albumPhotoBack} />
           </AlbumPhotoWrapper>
         </StandardSectionMain>
         <CustomAside>
           <MoreContentButton
             label={moreContentButtonLabel}
-            href="/dyskografia"
+            href={moreContentButtonLink}
           />
         </CustomAside>
       </MaxWidthWrapper>

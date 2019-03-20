@@ -114,7 +114,9 @@ class ContactComp extends Component {
       routeData: {
         contact: {
           title,
-          backgroundLetter,
+          callUsLabel,
+          sendMessageLabel,
+          formSubmitButtonLabel,
           formLabelName,
           formLabelDescription,
         },
@@ -133,12 +135,12 @@ class ContactComp extends Component {
               <CrossElement />
             </SectionImage>
             <SectionContent>
-              <Title>Zadzwoń</Title>
+              <Title>{callUsLabel}</Title>
               <PhoneNumbers>
                 <Phone href="tel:+48 512 041 057">+48 512 041 057</Phone>
                 <Phone href="tel:+48 692 666 146">+48 692 666 146</Phone>
               </PhoneNumbers>
-              <Title style={{ paddingTop: '60px' }}>Napisz</Title>
+              <Title style={{ paddingTop: '60px' }}>{sendMessageLabel}</Title>
               <Form
                 action="https://formspree.io/atmaquartet@gmail.com"
                 method="POST">
@@ -197,17 +199,13 @@ class ContactComp extends Component {
                 <input type="hidden" name="_format" value="plain" />
                 <input type="hidden" name="_language" value={language} />
                 <SubmitButton disabled={!email || !description} type="submit">
-                  Wyślij
+                  {formSubmitButtonLabel}
                 </SubmitButton>
               </Form>
             </SectionContent>
           </StandardSectionMain>
           <StandardSectionAside>
-            <SectionAsideTop>
-              <BackgroundLetter x={-200} y={50} isActive={isActive}>
-                {backgroundLetter}
-              </BackgroundLetter>
-            </SectionAsideTop>
+            <SectionAsideTop />
             <SectionAsideBottom />
           </StandardSectionAside>
         </MaxWidthWrapper>

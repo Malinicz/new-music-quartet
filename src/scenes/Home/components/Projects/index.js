@@ -15,7 +15,6 @@ import {
   SectionHeadingLine,
   SectionAsideTop,
   SectionAsideBottom,
-  BackgroundLetter,
   MaxWidthWrapper,
 } from 'components/base';
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
@@ -32,7 +31,7 @@ export const Projects = withRouteData(
   ({ routeData, createRef, isActive, projects }) => {
     const {
       title,
-      backgroundLetter,
+      moreContentButtonLink,
       moreContentButtonLabel,
     } = routeData.projects;
 
@@ -48,14 +47,14 @@ export const Projects = withRouteData(
               <CrossElement left />
             </SectionImage>
             <SectionContent>
-              {projects.map((project) => {
+              {projects.map((project, projectsIndex) => {
                 const paragraphs = project.description.split('\n');
 
                 return (
-                  <ProjectHolder>
+                  <ProjectHolder key={projectsIndex}>
                     <ProjectTitle>{project.title}</ProjectTitle>
-                    {paragraphs.map((paragraph) => (
-                      <Paragraph>{paragraph}</Paragraph>
+                    {paragraphs.map((paragraph, paragraphIndex) => (
+                      <Paragraph key={paragraphIndex}>{paragraph}</Paragraph>
                     ))}
                   </ProjectHolder>
                 );
@@ -63,15 +62,11 @@ export const Projects = withRouteData(
             </SectionContent>
           </StandardSectionMain>
           <StandardSectionAside>
-            <SectionAsideTop>
-              <BackgroundLetter x={0} y={50} isActive={isActive}>
-                {backgroundLetter}
-              </BackgroundLetter>
-            </SectionAsideTop>
+            <SectionAsideTop />
             <SectionAsideBottom>
               <MoreContentButton
                 label={moreContentButtonLabel}
-                href="/projekty"
+                href={moreContentButtonLink}
               />
             </SectionAsideBottom>
           </StandardSectionAside>

@@ -4,6 +4,7 @@ import { object } from 'prop-types';
 import styled from 'styles';
 
 import {
+  H2,
   StandardSection,
   StandardSectionMain,
   StandardSectionAside,
@@ -13,10 +14,9 @@ import {
   SectionHeadingLine,
   SectionAsideTop,
   SectionAsideBottom,
-  BackgroundLetter,
   MaxWidthWrapper,
 } from 'components/base';
-import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
+import { CrossElement, AnimatedPhoto } from 'components';
 
 import image from './main.jpg';
 
@@ -42,12 +42,7 @@ const Song = styled.div`
 
 export const Repertoire = withRouteData(
   ({ routeData, createRef, isActive }) => {
-    const {
-      title,
-      backgroundLetter,
-      moreContentButtonLabel,
-      list,
-    } = routeData.repertoire;
+    const { title, subtitle, list } = routeData.repertoire;
 
     const firstColumn = list.slice(0, 5);
     const secondColumn = list.slice(5);
@@ -64,6 +59,7 @@ export const Repertoire = withRouteData(
               <CrossElement left />
             </SectionImage>
             <SectionContent>
+              <H2>{subtitle}</H2>
               <SongsHolder>
                 <SongsColumn>
                   {firstColumn.map((song) => (
@@ -79,11 +75,7 @@ export const Repertoire = withRouteData(
             </SectionContent>
           </StandardSectionMain>
           <StandardSectionAside>
-            <SectionAsideTop>
-              <BackgroundLetter x={0} y={50} isActive={isActive}>
-                {backgroundLetter}
-              </BackgroundLetter>
-            </SectionAsideTop>
+            <SectionAsideTop />
             <SectionAsideBottom />
           </StandardSectionAside>
         </MaxWidthWrapper>

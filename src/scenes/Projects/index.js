@@ -44,11 +44,16 @@ class Projects extends Component {
                 return (
                   <ProjectHolder key={project.title}>
                     <H2>{project.title}</H2>
-                    {paragraphs.map((paragraph) => (
-                      <Paragraph>{paragraph}</Paragraph>
+                    {paragraphs.map((paragraph, index) => (
+                      <Paragraph key={index}>{paragraph}</Paragraph>
                     ))}
-                    {project.videoUrl.map((url) => (
-                      <Video url={url} width={600} height={320} />
+                    {project.videoUrl.map((url, videoIndex) => (
+                      <Video
+                        key={videoIndex}
+                        url={url}
+                        width={600}
+                        height={320}
+                      />
                     ))}
                   </ProjectHolder>
                 );

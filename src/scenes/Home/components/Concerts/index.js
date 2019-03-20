@@ -13,7 +13,6 @@ import {
   SectionHeadingLine,
   SectionAsideTop,
   SectionAsideBottom,
-  BackgroundLetter,
   MaxWidthWrapper,
 } from 'components/base';
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
@@ -25,7 +24,7 @@ export const Concerts = withRouteData(
   ({ routeData, sharedData: { language }, concerts, createRef, isActive }) => {
     const {
       title,
-      backgroundLetter,
+      moreContentButtonLink,
       moreContentButtonLabel,
       eventDetailsText,
       eventTimePrefix,
@@ -61,15 +60,11 @@ export const Concerts = withRouteData(
             </SectionContent>
           </StandardSectionMain>
           <StandardSectionAside>
-            <SectionAsideTop>
-              <BackgroundLetter x={0} y={50} isActive={isActive}>
-                {backgroundLetter}
-              </BackgroundLetter>
-            </SectionAsideTop>
+            <SectionAsideTop />
             <SectionAsideBottom>
               <MoreContentButton
                 label={moreContentButtonLabel}
-                href="/koncerty"
+                href={moreContentButtonLink}
               />
             </SectionAsideBottom>
           </StandardSectionAside>

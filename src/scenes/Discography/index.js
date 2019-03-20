@@ -16,7 +16,6 @@ import {
 import { SinglePageLayout } from 'components';
 
 import albumPhoto from 'assets/discography/albumPhoto.jpg';
-import albumPhotoBack from 'assets/discography/albumPhotoBack.jpg';
 
 const AlbumHolder = styled.div`
   margin: 50px 0;
@@ -61,9 +60,6 @@ class Discography extends Component {
                 <AlbumPhotosHolder>
                   <a href={albumPhoto}>
                     <AlbumPhoto src={albumPhoto} />
-                  </a>
-                  <a href={albumPhotoBack}>
-                    <AlbumPhoto src={albumPhotoBack} />
                   </a>
                 </AlbumPhotosHolder>
                 <AlbumAuthor>Atma Quartet</AlbumAuthor>

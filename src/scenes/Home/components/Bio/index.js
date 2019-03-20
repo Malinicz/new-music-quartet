@@ -12,7 +12,6 @@ import {
   SectionHeadingLine,
   SectionAsideTop,
   SectionAsideBottom,
-  BackgroundLetter,
   Paragraph,
   MaxWidthWrapper,
 } from 'components/base';
@@ -25,8 +24,8 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
     title,
     paragraph1,
     paragraph2,
-    backgroundLetter,
     moreContentButtonLabel,
+    moreContentButtonLink,
   } = routeData.bio;
 
   return (
@@ -46,14 +45,10 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
           </SectionContent>
         </StandardSectionMain>
         <StandardSectionAside>
-          <SectionAsideTop>
-            <BackgroundLetter x={-200} y={-250} isActive={isActive}>
-              {backgroundLetter}
-            </BackgroundLetter>
-          </SectionAsideTop>
+          <SectionAsideTop />
           <SectionAsideBottom>
             <MoreContentButton
-              href="/biografia"
+              href={moreContentButtonLink}
               label={moreContentButtonLabel}
             />
           </SectionAsideBottom>

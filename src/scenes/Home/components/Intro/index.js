@@ -4,9 +4,9 @@ import { func, string } from 'prop-types';
 
 import { Section } from 'components/base';
 import { LanguageSwitch } from './LanguageSwitch';
-import { PhotoCarousel } from './PhotoCarousel';
 
 import logo from 'assets/logo-black.svg';
+import pic from './assets/pic0.jpg';
 
 const IntroHolder = styled(Section)`
   max-width: 100%;
@@ -24,10 +24,19 @@ const Logo = styled.img`
   width: 300px;
 `;
 
+const Photo = styled.div`
+  background-image: url(${pic});
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+`;
+
 export const Intro = ({ handleLanguageSwitch, activeLanguage }) => {
   return (
     <IntroHolder>
-      <PhotoCarousel />
+      <Photo />
       <Logo src={logo} />
       <LanguageSwitch
         handleLanguageSwitch={handleLanguageSwitch}

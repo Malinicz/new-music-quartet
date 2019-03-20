@@ -93,12 +93,30 @@ export default {
         }),
       },
       {
+        path: '/biography',
+        component: 'src/scenes/Bio',
+        getData: () => ({
+          routeData: en.bio,
+          sharedData: en.shared,
+          canonicalUrl: `${siteRoot}/biography`,
+        }),
+      },
+      {
         path: '/dyskografia',
         component: 'src/scenes/Discography',
         getData: () => ({
           routeData: pl.discography,
           sharedData: pl.shared,
           canonicalUrl: `${siteRoot}/dyskografia`,
+        }),
+      },
+      {
+        path: '/discography',
+        component: 'src/scenes/Discography',
+        getData: () => ({
+          routeData: en.discography,
+          sharedData: en.shared,
+          canonicalUrl: `${siteRoot}/discography`,
         }),
       },
       {
@@ -112,13 +130,23 @@ export default {
         }),
       },
       {
-        path: '/projekty',
+        path: '/concerts',
+        component: 'src/scenes/Concerts',
+        getData: () => ({
+          routeData: en.concerts,
+          sharedData: en.shared,
+          concerts: concertsList,
+          canonicalUrl: `${siteRoot}/concerts`,
+        }),
+      },
+      {
+        path: '/projects',
         component: 'src/scenes/Projects',
         getData: () => ({
-          routeData: pl.projects,
-          sharedData: pl.shared,
-          projects: projectsListPl,
-          canonicalUrl: `${siteRoot}/projekty`,
+          routeData: en.projects,
+          sharedData: en.shared,
+          projects: projectsListEn,
+          canonicalUrl: `${siteRoot}/projects`,
         }),
       },
       {
@@ -128,6 +156,15 @@ export default {
           sharedData: pl.shared,
           routeData: pl.mailSubmissionSuccess,
           canonicalUrl: `${siteRoot}/wiadomosc-wyslana`,
+        }),
+      },
+      {
+        path: '/message-sent',
+        component: 'src/scenes/MailSubmissionSuccess',
+        getData: () => ({
+          sharedData: en.shared,
+          routeData: en.mailSubmissionSuccess,
+          canonicalUrl: `${siteRoot}/message-sent`,
         }),
       },
       {

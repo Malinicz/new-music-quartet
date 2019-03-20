@@ -1,26 +1,28 @@
+import bioPage from '../bio';
+
 export default {
   bio: {
     title: 'Biography',
-    backgroundLetter: 'B',
-    paragraph1:
-      'Uważany za jeden z najciekawszych kwartetów smyczkowych młodego pokolenia, powstał w 2016 roku i przez dwa lata działał pod nazwą New Music Quartet. Tworzą go absolwentki akademii muzycznych w Polsce – Katarzyna Gluza (skrzypce), Paulina Marcisz (skrzypce), Karalina Orsik-Sauter (altówka) oraz Dominika Szczypka (wiolonczela). Zespół od początku prowadzi intensywną działalność koncertową, popularyzując muzykę kameralną w kraju i na świecie, a szczególne miejsce w jego repertuarze zajmują dzieła kompozytorów polskich.',
-    paragraph2:
-      'Zespół zdobył I nagrodę i trzy nagrody specjalne w Międzynarodowym Konkursie Kwartetów Smyczkowych im. Karola Szymanowskiego w Katowicach (2017), Förderpreis i Bärenreiter Urtext Preis podczas Internationaler Wettbewerb „Franz Schubert und die Musik der Moderne” w Grazu (2018) oraz III nagrodę w Międzynarodowym Konkursie Muzycznym im. Karola Szymanowskiego w Katowicach (2018). Dwukrotnie został wyróżniony stypendium Prezydenta Miasta Bydgoszczy. Ãtma Quartet jest laureatem programu stypendialnego Ministra Kultury i Dziedzictwa Narodowego „Młoda Polska" (2018), który umożliwił realizację płyty z dziełami kompozytorów polskich.',
+    paragraph1: bioPage.paragraphs[0],
+    paragraph2: bioPage.paragraphs[1],
     moreContentButtonLabel: 'Read more',
+    moreContentButtonLink: '/biography',
   },
   concerts: {
     title: 'Concerts',
-    backgroundLetter: 'C',
+    eventDetailsText: 'Details',
+    eventTimePrefix: 'Time',
     moreContentButtonLabel: 'Show all',
+    moreContentButtonLink: '/concerts',
   },
   repertoire: {
     title: 'Repertoire',
-    backgroundLetter: 'R',
+    subtitle: 'Season 2019/2020',
     moreContentButtonLabel: 'Full repertoire',
     list: [
       'J. Haydn – String quartet op. 33 nr 5 [15’]',
       'L. van Beethoven – String quartet op. 18 nr 4 [25’]',
-      'F. Mendellsohn – String quartet op. 13 nr 2 [30’] ',
+      'F. Mendelssohn – String quartet op. 13 nr 2 [30’] ',
       'S. Moniuszko – String quartet  nr 1 [15’]',
       'K. Szymanowski – String quartet op. 56 nr 2 [20’]',
       'B. Bartok – String quartet Sz. 85 nr 3 [15’]',
@@ -29,32 +31,40 @@ export default {
       'K. Penderecki – String quartet „Kartki z niezapisanego dziennika” [18’]',
     ],
   },
+  discography: {
+    title: 'Discography',
+    moreContentButtonLabel: 'Show all',
+    moreContentButtonLink: '/discography',
+  },
   download: {
     title: 'Download',
-    backgroundLetter: 'D',
     bio: 'Biography',
+    bioLink:
+      'https://onedrive.live.com/view.aspx?cid=fb3effc860d8a13d&page=view&resid=FB3EFFC860D8A13D!108&parId=FB3EFFC860D8A13D!104&authkey=!ABmyuXIFcn7xyRM&app=Word',
     bioShort: 'Biography - short',
+    bioShortLink:
+      'https://onedrive.live.com/view.aspx?cid=fb3effc860d8a13d&page=view&resid=FB3EFFC860D8A13D!119&parId=FB3EFFC860D8A13D!104&authkey=!ABmyuXIFcn7xyRM&app=Word',
     rider: 'Technical rider',
+    riderLink:
+      'https://onedrive.live.com/?authkey=%21ABmyuXIFcn7xyRM&cid=FB3EFFC860D8A13D&id=FB3EFFC860D8A13D%21105&parId=FB3EFFC860D8A13D%21104&o=OneUp',
     photos: 'Photos',
+    photosLink:
+      'https://onedrive.live.com/?authkey=%21ABmyuXIFcn7xyRM&id=FB3EFFC860D8A13D%21104&cid=FB3EFFC860D8A13D',
   },
   media: {
     title: 'Media',
   },
-  discography: {
-    title: 'Dyskografia',
-    backgroundLetter: 'D',
-    moreContentButtonLabel: 'Zobacz wszystkie',
-  },
   contact: {
-    title: 'Kontakt',
-    backgroundLetter: 'K',
-    formLabelName: 'imię',
-    formLabelDescription: 'wiadomość',
-    formSubmitButtonLabel: 'wyślij',
+    title: 'Contact',
+    callUsLabel: 'Call us',
+    sendMessageLabel: 'Send a message',
+    formLabelName: 'name',
+    formLabelDescription: 'message',
+    formSubmitButtonLabel: 'send',
   },
   projects: {
-    title: 'Projekty',
-    backgroundLetter: 'P',
-    moreContentButtonLabel: 'Zobacz wszystkie',
+    title: 'Projects',
+    moreContentButtonLabel: 'Show all',
+    moreContentButtonLink: '/projects',
   },
 };

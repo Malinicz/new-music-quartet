@@ -80,11 +80,11 @@ class Concerts extends Component {
             </SinglePageSectionHeading>
             <SinglePageSectionPhoto src={mainPhoto} />
             <SinglePageSectionContent>
-              {upcomingEvents.map((event) => {
+              {upcomingEvents.map((event, index) => {
                 const pieces = event.pieces.split('\n');
 
                 return (
-                  <ConcertHolder>
+                  <ConcertHolder key={index}>
                     <Date>
                       {`${moment(event.date)
                         .locale(language)
@@ -95,7 +95,7 @@ class Concerts extends Component {
                     <PiecesTitle>{programTitle}</PiecesTitle>
                     <Pieces>
                       {pieces.map((piece) => (
-                        <Piece>{piece}</Piece>
+                        <Piece key={piece}>{piece}</Piece>
                       ))}
                     </Pieces>
                     <MoreContentButton
