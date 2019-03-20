@@ -7,7 +7,7 @@ import client from './src/services/contentfulClient';
 import pl from './src/data/pl';
 import en from './src/data/en';
 
-const siteRoot = 'https://atma.netlify.com';
+const siteRoot = 'https://www.atmaquartet.com';
 const stagingSiteRoot = 'https://staging-atma.netlify.com';
 const basePath = '';
 const stagingBasePath = '';
