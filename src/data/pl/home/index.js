@@ -6,14 +6,14 @@ export default {
     paragraph1: bioPage.paragraphs[0],
     paragraph2: bioPage.paragraphs[1],
     moreContentButtonLabel: 'Przeczytaj więcej',
-    moreContentButtonLink: '/biografia',
+    moreContentButtonLink: '/biografia/',
   },
   concerts: {
     title: 'Koncerty',
     eventDetailsText: 'Szczegóły',
     eventTimePrefix: 'Godzina',
     moreContentButtonLabel: 'Pokaż wszystkie',
-    moreContentButtonLink: '/koncerty',
+    moreContentButtonLink: '/koncerty/',
   },
   repertoire: {
     title: 'Repertuar',
@@ -34,7 +34,7 @@ export default {
   discography: {
     title: 'Dyskografia',
     moreContentButtonLabel: 'Zobacz wszystkie',
-    moreContentButtonLink: '/dyskografia',
+    moreContentButtonLink: '/dyskografia/',
   },
   download: {
     title: 'Do pobrania',
@@ -65,6 +65,6 @@ export default {
   projects: {
     title: 'Projekty',
     moreContentButtonLabel: 'Pokaż szczegóły',
-    moreContentButtonLink: '/projekty',
+    moreContentButtonLink: '/projekty/',
   },
 };
