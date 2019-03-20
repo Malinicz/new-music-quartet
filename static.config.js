@@ -140,6 +140,16 @@ export default {
         }),
       },
       {
+        path: '/projekty',
+        component: 'src/scenes/Projects',
+        getData: () => ({
+          routeData: pl.projects,
+          sharedData: pl.shared,
+          projects: projectsListPl,
+          canonicalUrl: `${siteRoot}/projekty`,
+        }),
+      },
+      {
         path: '/projects',
         component: 'src/scenes/Projects',
         getData: () => ({
