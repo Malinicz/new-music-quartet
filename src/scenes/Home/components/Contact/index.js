@@ -14,7 +14,6 @@ import {
   SectionHeadingLine,
   SectionAsideTop,
   SectionAsideBottom,
-  BackgroundLetter,
   InputsRow,
   MaxWidthWrapper,
   Form,
@@ -25,7 +24,8 @@ import {
 } from 'components/base';
 import { CrossElement, AnimatedPhoto, Icon } from 'components';
 
-import image from 'assets/contact.jpg';
+import contactImage from 'assets/contact.jpg';
+import contactImageSmall from 'assets/contact-small.jpg';
 
 const PhoneNumbers = styled.div`
   display: flex;
@@ -119,6 +119,7 @@ class ContactComp extends Component {
           formSubmitButtonLabel,
           formLabelName,
           formLabelDescription,
+          formSubmissionSuccessLink,
         },
       },
     } = this.props;
@@ -131,7 +132,11 @@ class ContactComp extends Component {
               {title} <SectionHeadingLine />
             </SectionHeading>
             <SectionImage>
-              <AnimatedPhoto image={image} isActive={isActive} />
+              <AnimatedPhoto
+                image={contactImage}
+                imageSmall={contactImageSmall}
+                isActive={isActive}
+              />
               <CrossElement />
             </SectionImage>
             <SectionContent>
@@ -190,7 +195,11 @@ class ContactComp extends Component {
                     }
                   />
                 </InputGroup>
-                <input type="hidden" name="_next" value="/wiadomosc-wyslana" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value={formSubmissionSuccessLink}
+                />
                 <input
                   type="hidden"
                   name="_subject"

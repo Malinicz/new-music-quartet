@@ -17,7 +17,8 @@ import {
 } from 'components/base';
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
 
-import image from 'assets/bio.jpg';
+import bioImage from 'assets/bio.jpg';
+import bioImageSmall from 'assets/bio-small.jpg';
 
 export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
   const {
@@ -36,7 +37,11 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
             {title} <SectionHeadingLine />
           </SectionHeading>
           <SectionImage>
-            <AnimatedPhoto image={image} isActive={isActive} />
+            <AnimatedPhoto
+              image={bioImage}
+              imageSmall={bioImageSmall}
+              isActive={isActive}
+            />
             <CrossElement />
           </SectionImage>
           <SectionContent>

@@ -19,7 +19,8 @@ import {
 } from 'components/base';
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
 
-import image from 'assets/projects.jpg';
+import projectsImage from 'assets/projects.jpg';
+import projectsImageSmall from 'assets/projects-small.jpg';
 
 const ProjectHolder = styled.div`
   margin-bottom: 30px;
@@ -43,7 +44,11 @@ export const Projects = withRouteData(
               {title} <SectionHeadingLine />
             </SectionHeading>
             <SectionImage>
-              <AnimatedPhoto image={image} isActive={isActive} />
+              <AnimatedPhoto
+                image={projectsImage}
+                imageSmall={projectsImageSmall}
+                isActive={isActive}
+              />
               <CrossElement left />
             </SectionImage>
             <SectionContent>

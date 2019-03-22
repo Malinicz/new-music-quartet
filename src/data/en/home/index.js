@@ -61,6 +61,7 @@ export default {
     formLabelName: 'name',
     formLabelDescription: 'message',
     formSubmitButtonLabel: 'send',
+    formSubmissionSuccessLink: '/message-sent/',
   },
   projects: {
     title: 'Projects',

@@ -17,7 +17,8 @@ import {
 } from 'components/base';
 import { CrossElement, AnimatedPhoto, Icon } from 'components';
 
-import image from './main.jpg';
+import downloadImage from 'assets/download.jpg';
+import downloadImageSmall from 'assets/download-small.jpg';
 
 const DownloadItem = styled.a`
   display: flex;
@@ -50,7 +51,11 @@ export const Download = withRouteData(({ routeData, createRef, isActive }) => {
             {title} <SectionHeadingLine />
           </SectionHeading>
           <SectionImage>
-            <AnimatedPhoto image={image} isActive={isActive} />
+            <AnimatedPhoto
+              image={downloadImage}
+              imageSmall={downloadImageSmall}
+              isActive={isActive}
+            />
             <CrossElement />
           </SectionImage>
           <SectionContent />

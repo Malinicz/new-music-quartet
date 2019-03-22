@@ -18,7 +18,8 @@ import {
 import { MoreContentButton, CrossElement, AnimatedPhoto } from 'components';
 import { Calendar } from './Calendar';
 
-import image from 'assets/concerts.jpg';
+import concertsImage from 'assets/concerts.jpg';
+import concertsImageSmall from 'assets/concerts-small.jpg';
 
 export const Concerts = withRouteData(
   ({ routeData, sharedData: { language }, concerts, createRef, isActive }) => {
@@ -49,7 +50,11 @@ export const Concerts = withRouteData(
               {title} <SectionHeadingLine />
             </SectionHeading>
             <SectionImage>
-              <AnimatedPhoto image={image} isActive={isActive} />
+              <AnimatedPhoto
+                image={concertsImage}
+                imageSmall={concertsImageSmall}
+                isActive={isActive}
+              />
               <CrossElement left />
             </SectionImage>
             <SectionContent>

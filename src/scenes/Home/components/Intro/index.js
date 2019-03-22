@@ -6,7 +6,7 @@ import { Section } from 'components/base';
 import { LanguageSwitch } from './LanguageSwitch';
 
 import logo from 'assets/logo-black.svg';
-import pic from './assets/pic0.jpg';
+import pic from 'assets/main.jpg';
 
 const IntroHolder = styled(Section)`
   max-width: 100%;

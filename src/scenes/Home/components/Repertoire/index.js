@@ -18,7 +18,8 @@ import {
 } from 'components/base';
 import { CrossElement, AnimatedPhoto } from 'components';
 
-import image from './main.jpg';
+import repertoireImage from 'assets/repertoire.jpg';
+import repertoireImageSmall from 'assets/repertoire-small.jpg';
 
 const SongsHolder = styled.div`
   display: flex;
@@ -55,7 +56,11 @@ export const Repertoire = withRouteData(
               {title} <SectionHeadingLine />
             </SectionHeading>
             <SectionImage>
-              <AnimatedPhoto image={image} isActive={isActive} />
+              <AnimatedPhoto
+                image={repertoireImage}
+                imageSmall={repertoireImageSmall}
+                isActive={isActive}
+              />
               <CrossElement left />
             </SectionImage>
             <SectionContent>

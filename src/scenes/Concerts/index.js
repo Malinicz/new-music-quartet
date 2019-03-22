@@ -15,7 +15,7 @@ import {
 } from 'components/base';
 import { SinglePageLayout, MoreContentButton } from 'components';
 
-import mainPhoto from 'assets/concerts.jpg';
+import concertsImage from 'assets/concerts.jpg';
 
 const ConcertHolder = styled.div`
   padding: 30px 0 60px 0;
@@ -78,7 +78,7 @@ class Concerts extends Component {
               {title}
               <SectionHeadingLine />
             </SinglePageSectionHeading>
-            <SinglePageSectionPhoto src={mainPhoto} />
+            <SinglePageSectionPhoto src={concertsImage} />
             <SinglePageSectionContent>
               {upcomingEvents.map((event, index) => {
                 const pieces = event.pieces.split('\n');

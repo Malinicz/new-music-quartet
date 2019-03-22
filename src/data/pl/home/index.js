@@ -61,6 +61,7 @@ export default {
     formLabelName: 'imię',
     formLabelDescription: 'wiadomość',
     formSubmitButtonLabel: 'wyślij',
+    formSubmissionSuccessLink: '/wiadomosc-wyslana/',
   },
   projects: {
     title: 'Projekty',

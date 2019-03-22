@@ -18,17 +18,22 @@ const PhotoImage = styled.div.attrs(({ isActive }) => ({
   background-position: center;
   background-size: cover;
   transition: transform 10s ease;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    background-image: ${({ imageSmall }) => `url(${imageSmall})`};
+  }
 `;
 
-export const AnimatedPhoto = ({ image, isActive }) => {
+export const AnimatedPhoto = ({ image, imageSmall, isActive }) => {
   return (
     <AnimatedPhotoHolder>
-      <PhotoImage image={image} isActive={isActive} />
+      <PhotoImage image={image} imageSmall={imageSmall} isActive={isActive} />
     </AnimatedPhotoHolder>
   );
 };
 
 AnimatedPhoto.propTypes = {
   image: string.isRequired,
+  imageSmall: string.isRequired,
   isActive: bool.isRequired,
 };
