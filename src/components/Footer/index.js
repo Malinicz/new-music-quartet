@@ -51,7 +51,7 @@ export const Footer = withRouteData(({ sharedData: { footer } }) => {
         <LinkWrapper
           href="https://www.facebook.com/atmaquartet"
           target="_blank"
-          aria-label="Facebook page">
+          aria-label="Facebook page"
           rel="noopener noreferrer">
           <Facebook src={facebookLogo} alt="facebook logo" />
         </LinkWrapper>
