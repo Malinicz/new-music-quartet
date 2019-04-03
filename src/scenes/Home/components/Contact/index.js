@@ -120,6 +120,7 @@ class ContactComp extends Component {
           formLabelName,
           formLabelDescription,
           formSubmissionSuccessLink,
+          mainPhotoAlt,
         },
       },
     } = this.props;
@@ -136,6 +137,7 @@ class ContactComp extends Component {
                 image={contactImage}
                 imageSmall={contactImageSmall}
                 isActive={isActive}
+                alt={mainPhotoAlt}
               />
               <CrossElement />
             </SectionImage>
@@ -151,14 +153,16 @@ class ContactComp extends Component {
                 method="POST">
                 <InputsRow>
                   <StyledInputGroup>
-                    <InputLabel htmlFor="email">email *</InputLabel>
-                    <Input
-                      type="text"
-                      name="email"
-                      value={email}
-                      style={{ paddingRight: '50px' }}
-                      onChange={(e) => this.onUpdateEmail(e.target.value)}
-                    />
+                    <InputLabel htmlFor="email">
+                      email *
+                      <Input
+                        type="text"
+                        name="email"
+                        value={email}
+                        style={{ paddingRight: '50px' }}
+                        onChange={(e) => this.onUpdateEmail(e.target.value)}
+                      />
+                    </InputLabel>
                     {email && (
                       <IconHolder isEmailValid={isEmailValid}>
                         {isEmailValid ? (
@@ -170,30 +174,32 @@ class ContactComp extends Component {
                     )}
                   </StyledInputGroup>
                   <StyledInputGroup>
-                    <InputLabel htmlFor="name">{formLabelName}</InputLabel>
-                    <Input
-                      type="text"
-                      name="name"
-                      value={name}
-                      onChange={(e) =>
-                        this.onUpdateField('name', e.target.value)
-                      }
-                    />
+                    <InputLabel htmlFor="name">
+                      {formLabelName}
+                      <Input
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={(e) =>
+                          this.onUpdateField('name', e.target.value)
+                        }
+                      />
+                    </InputLabel>
                   </StyledInputGroup>
                 </InputsRow>
                 <InputGroup>
                   <InputLabel htmlFor="description">
                     {formLabelDescription} *
+                    <TextArea
+                      type="text"
+                      name="description"
+                      value={description}
+                      style={{ marginBottom: '20px' }}
+                      onChange={(e) =>
+                        this.onUpdateField('description', e.target.value)
+                      }
+                    />
                   </InputLabel>
-                  <TextArea
-                    type="text"
-                    name="description"
-                    value={description}
-                    style={{ marginBottom: '20px' }}
-                    onChange={(e) =>
-                      this.onUpdateField('description', e.target.value)
-                    }
-                  />
                 </InputGroup>
                 <input
                   type="hidden"

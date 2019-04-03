@@ -24,11 +24,19 @@ const Main = styled.main`
   width: 100%;
 `;
 
-export const Layout = withRouteData(({ children, canonicalUrl }) => {
+export const Layout = withRouteData(({ children, canonicalUrl, language }) => {
   return (
     <LayoutHolder>
       <Head>
         <link rel="canonical" href={canonicalUrl} />
+        <meta
+          name="Description"
+          content={
+            language === 'pl'
+              ? 'Strona kwartetu smyczkowego Atma Quartet'
+              : 'Atma Quartet - string quartet from Poland'
+          }
+        />
       </Head>
       <Header />
       <Main>{children}</Main>
@@ -40,4 +48,5 @@ export const Layout = withRouteData(({ children, canonicalUrl }) => {
 Layout.propTypes = {
   children: node.isRequired,
   canonicalUrl: string,
+  language: string,
 };

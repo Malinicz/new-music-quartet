@@ -86,6 +86,7 @@ export class PhotoGallery extends Component {
                 left={photo.left}
                 desktopOnly={photo.desktopOnly}
                 mobileOnly={photo.mobileOnly}
+                alt="Atma Quartet"
               />
             </a>
           ))}

@@ -7,6 +7,7 @@ export default {
     paragraph2: bioPage.paragraphs[1],
     moreContentButtonLabel: 'Read more',
     moreContentButtonLink: '/biography/',
+    mainPhotoAlt: 'Atma Quartet sitting on a couch',
   },
   concerts: {
     title: 'Concerts',
@@ -14,10 +15,12 @@ export default {
     eventTimePrefix: 'Time',
     moreContentButtonLabel: 'Show all',
     moreContentButtonLink: '/concerts/',
+    mainPhotoAlt: 'Atma Quartet sitting on a couch',
   },
   repertoire: {
     title: 'Repertoire',
     subtitle: 'Season 2019/2020',
+    mainPhotoAlt: 'Violin',
     moreContentButtonLabel: 'Full repertoire',
     list: [
       'J. Haydn – String quartet op. 33 nr 5 [15’]',
@@ -35,9 +38,11 @@ export default {
     title: 'Discography',
     moreContentButtonLabel: 'Show all',
     moreContentButtonLink: '/discography/',
+    albumPhotoAlt: 'Album photo',
   },
   download: {
     title: 'Download',
+    mainPhotoAlt: 'Atma Quartet photo',
     bio: 'Biography',
     bioLink:
       'https://onedrive.live.com/view.aspx?cid=fb3effc860d8a13d&page=view&resid=FB3EFFC860D8A13D!108&parId=FB3EFFC860D8A13D!104&authkey=!ABmyuXIFcn7xyRM&app=Word',
@@ -62,10 +67,12 @@ export default {
     formLabelDescription: 'message',
     formSubmitButtonLabel: 'send',
     formSubmissionSuccessLink: '/message-sent/',
+    mainPhotoAlt: 'Atma Quartet photo',
   },
   projects: {
     title: 'Projects',
     moreContentButtonLabel: 'Show all',
     moreContentButtonLink: '/projects/',
+    mainPhotoAlt: 'Music notation',
   },
 };

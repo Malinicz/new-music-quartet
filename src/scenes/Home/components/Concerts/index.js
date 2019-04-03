@@ -29,6 +29,7 @@ export const Concerts = withRouteData(
       moreContentButtonLabel,
       eventDetailsText,
       eventTimePrefix,
+      mainPhotoAlt,
     } = routeData.concerts;
 
     const calendarEvents = concerts
@@ -54,6 +55,7 @@ export const Concerts = withRouteData(
                 image={concertsImage}
                 imageSmall={concertsImageSmall}
                 isActive={isActive}
+                alt={mainPhotoAlt}
               />
               <CrossElement left />
             </SectionImage>

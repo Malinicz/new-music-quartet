@@ -58,7 +58,13 @@ class Concerts extends Component {
   render() {
     const {
       sharedData: { language },
-      routeData: { title, programTitle, buttonLabelEventSite, emptyListText },
+      routeData: {
+        title,
+        programTitle,
+        buttonLabelEventSite,
+        emptyListText,
+        mainPhotoAlt,
+      },
       concerts,
       history,
     } = this.props;
@@ -78,7 +84,7 @@ class Concerts extends Component {
               {title}
               <SectionHeadingLine />
             </SinglePageSectionHeading>
-            <SinglePageSectionPhoto src={concertsImage} />
+            <SinglePageSectionPhoto src={concertsImage} alt={mainPhotoAlt} />
             <SinglePageSectionContent>
               {upcomingEvents.map((event, index) => {
                 const pieces = event.pieces.split('\n');

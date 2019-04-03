@@ -43,7 +43,7 @@ class Discography extends Component {
   render() {
     const {
       sharedData: { language },
-      routeData: { title },
+      routeData: { title, albumPhotoAlt },
       history,
     } = this.props;
 
@@ -59,7 +59,7 @@ class Discography extends Component {
               <AlbumHolder>
                 <AlbumPhotosHolder>
                   <a href={albumPhoto}>
-                    <AlbumPhoto src={albumPhoto} />
+                    <AlbumPhoto src={albumPhoto} alt={albumPhotoAlt} />
                   </a>
                 </AlbumPhotosHolder>
                 <AlbumAuthor>Atma Quartet</AlbumAuthor>

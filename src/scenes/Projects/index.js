@@ -23,7 +23,7 @@ class Projects extends Component {
   render() {
     const {
       sharedData: { language },
-      routeData: { title },
+      routeData: { title, mainPhotoAlt },
       history,
       projects,
     } = this.props;
@@ -36,7 +36,7 @@ class Projects extends Component {
               {title}
               <SectionHeadingLine />
             </SinglePageSectionHeading>
-            <SinglePageSectionPhoto src={projectsImage} />
+            <SinglePageSectionPhoto src={projectsImage} alt={mainPhotoAlt} />
             <SinglePageSectionContent>
               {projects.map((project) => {
                 const paragraphs = project.description.split('\n');

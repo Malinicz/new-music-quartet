@@ -51,12 +51,14 @@ export const Footer = withRouteData(({ sharedData: { footer } }) => {
         <LinkWrapper
           href="https://www.facebook.com/atmaquartet"
           target="_blank"
+          aria-label="Facebook page">
           rel="noopener noreferrer">
           <Facebook src={facebookLogo} alt="facebook logo" />
         </LinkWrapper>
         <LinkWrapper
           href="https://www.youtube.com/channel/UCpmy9nNALahl3EZNj99bjEQ"
           target="_blank"
+          aria-label="YouTube page"
           rel="noopener noreferrer">
           <Youtube src={youtubeLogo} alt="youtube logo" />
         </LinkWrapper>

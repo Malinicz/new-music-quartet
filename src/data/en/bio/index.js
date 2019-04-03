@@ -8,6 +8,7 @@ export default {
     'Since 2018 the Ãtma Quartet has been actively participating in the Le Dimore del Quartetto project, promoting Polish music in Italy. The ensemble has also been engaged in the French ProQuartet programme, whose aim is to foster the development of chamber music in the world.',
   ],
   backUrl: '/#biografia',
+  mainPhotoAlt: 'Atma Quartet sitting on a couch',
   katarzyna: {
     name: 'Katarzyna Gluza',
     instrument: 'violin',

@@ -47,6 +47,7 @@ export const Discography = withRouteData(({ routeData }) => {
     title,
     moreContentButtonLabel,
     moreContentButtonLink,
+    albumPhotoAlt,
   } = routeData.discography;
 
   return (
@@ -57,7 +58,7 @@ export const Discography = withRouteData(({ routeData }) => {
             {title} <SectionHeadingLine />
           </SectionHeading>
           <AlbumPhotoWrapper>
-            <AlbumPhoto src={albumPhoto} />
+            <AlbumPhoto src={albumPhoto} alt={albumPhotoAlt} />
           </AlbumPhotoWrapper>
         </StandardSectionMain>
         <CustomAside>

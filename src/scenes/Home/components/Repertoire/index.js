@@ -43,7 +43,7 @@ const Song = styled.div`
 
 export const Repertoire = withRouteData(
   ({ routeData, createRef, isActive }) => {
-    const { title, subtitle, list } = routeData.repertoire;
+    const { title, subtitle, list, mainPhotoAlt } = routeData.repertoire;
 
     const firstColumn = list.slice(0, 5);
     const secondColumn = list.slice(5);
@@ -60,6 +60,7 @@ export const Repertoire = withRouteData(
                 image={repertoireImage}
                 imageSmall={repertoireImageSmall}
                 isActive={isActive}
+                alt={mainPhotoAlt}
               />
               <CrossElement left />
             </SectionImage>

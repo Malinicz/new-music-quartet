@@ -41,6 +41,7 @@ export const Download = withRouteData(({ routeData, createRef, isActive }) => {
     riderLink,
     photos,
     photosLink,
+    mainPhotoAlt,
   } = routeData.download;
 
   return (
@@ -55,6 +56,7 @@ export const Download = withRouteData(({ routeData, createRef, isActive }) => {
               image={downloadImage}
               imageSmall={downloadImageSmall}
               isActive={isActive}
+              alt={mainPhotoAlt}
             />
             <CrossElement />
           </SectionImage>

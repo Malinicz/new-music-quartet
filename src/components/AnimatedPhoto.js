@@ -24,10 +24,15 @@ const PhotoImage = styled.div.attrs(({ isActive }) => ({
   }
 `;
 
-export const AnimatedPhoto = ({ image, imageSmall, isActive }) => {
+export const AnimatedPhoto = ({ image, imageSmall, isActive, alt }) => {
   return (
     <AnimatedPhotoHolder>
-      <PhotoImage image={image} imageSmall={imageSmall} isActive={isActive} />
+      <PhotoImage
+        image={image}
+        imageSmall={imageSmall}
+        isActive={isActive}
+        alt={alt}
+      />
     </AnimatedPhotoHolder>
   );
 };
@@ -36,4 +41,5 @@ AnimatedPhoto.propTypes = {
   image: string.isRequired,
   imageSmall: string.isRequired,
   isActive: bool.isRequired,
+  alt: string.isRequired,
 };

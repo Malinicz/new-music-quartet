@@ -16,7 +16,7 @@ export const CheckMarkIcon = () => {
   return (
     <svg
       version="1.1"
-      id="Capa_1"
+      id="checkmark"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 612.005 612.005">
       <g>
@@ -38,19 +38,19 @@ export const Document = () => {
       fill="currentColor">
       <g id="document" transform="translate(-0.5)">
         <path
-          id="Path_7"
+          id="document_path_1"
           data-name="Path 7"
           d="M116.716,186.025a.818.818,0,0,0,1.158,0l3.508-3.508a.819.819,0,1,0-1.158-1.158l-2.11,2.11v-5.916a.819.819,0,0,0-1.638,0v5.916l-2.11-2.11a.819.819,0,1,0-1.158,1.158Zm0,0"
           transform="translate(-106.329 -167.087)"
         />
         <path
-          id="Path_8"
+          id="document_path_2"
           data-name="Path 8"
           d="M120.8,385.6h-7.016a.819.819,0,0,0,0,1.638H120.8a.819.819,0,0,0,0-1.638Zm0,0"
           transform="translate(-106.326 -364.553)"
         />
         <path
-          id="Path_9"
+          id="document_path_3"
           data-name="Path 9"
           d="M18.859,0H6.581A.819.819,0,0,0,6,.24L.74,5.5a.819.819,0,0,0-.24.579V25.375a2.576,2.576,0,0,0,2.573,2.573H18.859a2.572,2.572,0,0,0,2.573-2.573V2.573A2.571,2.571,0,0,0,18.859,0ZM6.639,1.918V5.2a.936.936,0,0,1-.935.935H2.418ZM19.794,25.375a.935.935,0,0,1-.935.935H3.073a.936.936,0,0,1-.935-.935V7.777H5.7A2.576,2.576,0,0,0,8.277,5.2V1.638H18.859a.935.935,0,0,1,.935.935Zm0,0"
         />
@@ -63,7 +63,7 @@ export const ArrowRightIcon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.217 13.224">
       <path
-        id="Path_1"
+        id="arrow"
         data-name="Path 1"
         d="M18.955,47.9l-5.719-5.719a.894.894,0,0,0-1.264,1.264l4.193,4.193H.894a.894.894,0,0,0,0,1.787H16.166l-4.193,4.193a.894.894,0,0,0,1.264,1.264l5.718-5.719A.893.893,0,0,0,18.955,47.9Z"
         transform="translate(0 -41.916)"

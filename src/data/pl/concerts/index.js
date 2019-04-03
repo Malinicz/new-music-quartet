@@ -3,4 +3,5 @@ export default {
   programTitle: 'Program',
   buttonLabelEventSite: 'Strona wydarzenia',
   emptyListText: 'Brak nadchodzących wydarzeń',
+  mainPhotoAlt: 'Zdjęcie zespołu Atma Quartet',
 };

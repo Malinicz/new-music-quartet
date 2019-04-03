@@ -34,6 +34,7 @@ export const Projects = withRouteData(
       title,
       moreContentButtonLink,
       moreContentButtonLabel,
+      mainPhotoAlt,
     } = routeData.projects;
 
     return (
@@ -48,6 +49,7 @@ export const Projects = withRouteData(
                 image={projectsImage}
                 imageSmall={projectsImageSmall}
                 isActive={isActive}
+                alt={mainPhotoAlt}
               />
               <CrossElement left />
             </SectionImage>

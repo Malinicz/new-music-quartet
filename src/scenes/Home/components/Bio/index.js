@@ -27,6 +27,7 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
     paragraph2,
     moreContentButtonLabel,
     moreContentButtonLink,
+    mainPhotoAlt,
   } = routeData.bio;
 
   return (
@@ -41,6 +42,7 @@ export const Bio = withRouteData(({ routeData, createRef, isActive }) => {
               image={bioImage}
               imageSmall={bioImageSmall}
               isActive={isActive}
+              alt={mainPhotoAlt}
             />
             <CrossElement />
           </SectionImage>

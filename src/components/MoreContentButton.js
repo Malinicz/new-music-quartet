@@ -40,6 +40,7 @@ export const MoreContentButton = ({ label, href, target = '_self' }) => {
     <MoreContentButtonHolder
       href={href}
       target={target}
+      aria-label={label}
       rel="noopener noreferrer">
       <Label>{label}</Label>
       <IconHolder>

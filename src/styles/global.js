@@ -11,6 +11,7 @@ export default createGlobalStyle`
     src: url('${primaryRegular}');
     font-weight: ${theme.fontWeight.regular};
     font-style: normal;
+    font-display: auto;
   }
 
   @font-face {
@@ -18,6 +19,7 @@ export default createGlobalStyle`
     src: url('${primaryBold}');
     font-weight: ${theme.fontWeight.bold};
     font-style: normal;
+    font-display: auto;
   }
 
   @font-face {
@@ -25,6 +27,7 @@ export default createGlobalStyle`
     src: url('${secondaryMedium}');
     font-weight: ${theme.fontWeight.medium};
     font-style: normal;
+    font-display: auto;
   }
 
   body {

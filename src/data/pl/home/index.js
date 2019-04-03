@@ -7,6 +7,7 @@ export default {
     paragraph2: bioPage.paragraphs[1],
     moreContentButtonLabel: 'Przeczytaj więcej',
     moreContentButtonLink: '/biografia/',
+    mainPhotoAlt: 'Zdjęcie zespołu Atma Quartet',
   },
   concerts: {
     title: 'Koncerty',
@@ -14,10 +15,12 @@ export default {
     eventTimePrefix: 'Godzina',
     moreContentButtonLabel: 'Pokaż wszystkie',
     moreContentButtonLink: '/koncerty/',
+    mainPhotoAlt: 'Zdjęcie zespołu Atma Quartet',
   },
   repertoire: {
     title: 'Repertuar',
     subtitle: 'Sezon 2019/2020',
+    mainPhotoAlt: 'Skrzypce',
     moreContentButtonLabel: 'Pełny repertuar',
     list: [
       'J. Haydn – Kwartet smyczkowy op. 33 nr 5 [15’]',
@@ -35,9 +38,11 @@ export default {
     title: 'Dyskografia',
     moreContentButtonLabel: 'Zobacz wszystkie',
     moreContentButtonLink: '/dyskografia/',
+    albumPhotoAlt: 'Okładka albumu',
   },
   download: {
     title: 'Do pobrania',
+    mainPhotoAlt: 'Zdjęcie Atma Quartet',
     bio: 'Notka biograficzna',
     bioLink:
       'https://onedrive.live.com/view.aspx?cid=fb3effc860d8a13d&page=view&resid=FB3EFFC860D8A13D!107&parId=FB3EFFC860D8A13D!104&authkey=!ABmyuXIFcn7xyRM&app=Word',
@@ -62,10 +67,12 @@ export default {
     formLabelDescription: 'wiadomość',
     formSubmitButtonLabel: 'wyślij',
     formSubmissionSuccessLink: '/wiadomosc-wyslana/',
+    mainPhotoAlt: 'Zdjęcie Atma Quartet',
   },
   projects: {
     title: 'Projekty',
     moreContentButtonLabel: 'Pokaż szczegóły',
     moreContentButtonLink: '/projekty/',
+    mainPhotoAlt: 'Zapis nutowy',
   },
 };

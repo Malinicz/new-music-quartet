@@ -54,7 +54,15 @@ class Bio extends Component {
   render() {
     const {
       sharedData: { language },
-      routeData: { title, paragraphs, katarzyna, dominika, paulina, karalina },
+      routeData: {
+        title,
+        paragraphs,
+        katarzyna,
+        dominika,
+        paulina,
+        karalina,
+        mainPhotoAlt,
+      },
       history,
     } = this.props;
 
@@ -66,7 +74,7 @@ class Bio extends Component {
               {title}
               <SectionHeadingLine />
             </SinglePageSectionHeading>
-            <SinglePageSectionPhoto src={bio} />
+            <SinglePageSectionPhoto src={bio} alt={mainPhotoAlt} />
             <SinglePageSectionContent>
               {paragraphs.map((paragraph, index) => {
                 return <Paragraph key={index}>{paragraph}</Paragraph>;

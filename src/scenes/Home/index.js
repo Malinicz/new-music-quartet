@@ -77,7 +77,7 @@ class Home extends Component {
     } = this.props;
 
     return (
-      <Layout>
+      <Layout language={language}>
         <Intro
           handleLanguageSwitch={this.onLanguageSwitch}
           activeLanguage={language}

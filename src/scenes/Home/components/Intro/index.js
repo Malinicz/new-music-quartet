@@ -36,8 +36,8 @@ const Photo = styled.div`
 export const Intro = ({ handleLanguageSwitch, activeLanguage }) => {
   return (
     <IntroHolder>
-      <Photo />
-      <Logo src={logo} />
+      <Photo title="Atma Quartet" />
+      <Logo src={logo} alt="logo" />
       <LanguageSwitch
         handleLanguageSwitch={handleLanguageSwitch}
         activeLanguage={activeLanguage}

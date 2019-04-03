@@ -30,6 +30,7 @@ export const Video = ({ url, width = 520, height = 280 }) => {
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
+        title="Atma Quartet Video"
       />
     </IFrameHolder>
   );
