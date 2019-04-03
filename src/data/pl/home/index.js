@@ -58,6 +58,7 @@ export default {
   },
   media: {
     title: 'Media',
+    photoLinkAriaLabel: 'Link do zdjęcia w pełnych rozmiarach',
   },
   contact: {
     title: 'Kontakt',

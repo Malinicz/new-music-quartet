@@ -13,7 +13,7 @@ import { PhotoGallery } from './PhotoGallery';
 import { VideoGallery } from './VideoGallery';
 
 export const Media = withRouteData(({ routeData, videos }) => {
-  const { title } = routeData.media;
+  const { title, photoLinkAriaLabel } = routeData.media;
 
   return (
     <StandardSection name={title}>
@@ -22,7 +22,7 @@ export const Media = withRouteData(({ routeData, videos }) => {
           <SectionHeading>
             {title} <SectionHeadingLine />
           </SectionHeading>
-          <PhotoGallery />
+          <PhotoGallery photoLinkAriaLabel={photoLinkAriaLabel} />
           <VideoGallery videos={videos} />
         </StandardSectionMain>
       </MaxWidthWrapper>

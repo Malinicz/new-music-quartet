@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styles';
+import { string } from 'prop-types';
 
 import { photos } from './config';
 
@@ -73,11 +74,15 @@ const Photo = styled.div`
 
 export class PhotoGallery extends Component {
   render() {
+    const { photoLinkAriaLabel } = this.props;
     return (
       <PhotoGalleryHolder>
         <CenterPoint>
           {photos.map((photo, index) => (
-            <a key={`${photo.image}-${index}`} href={photo.fullImage}>
+            <a
+              key={`${photo.image}-${index}`}
+              href={photo.fullImage}
+              aria-label={photoLinkAriaLabel}>
               <Photo
                 image={photo.image}
                 rotate={photo.rotate}
@@ -95,3 +100,7 @@ export class PhotoGallery extends Component {
     );
   }
 }
+
+PhotoGallery.propTypes = {
+  photoLinkAriaLabel: string.isRequired,
+};
