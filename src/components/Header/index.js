@@ -13,7 +13,8 @@ const HeaderHolder = styled(Section.withComponent('header'))`
   position: fixed;
   top: 0;
   z-index: 100;
-  height: 90px;
+  height: 1px;
+  padding: 0;
   max-width: 100%;
   background: transparent;
 `;

@@ -31,5 +31,6 @@ module.exports = {
     'import/order': OFF,
     'no-return-assign': OFF,
     'no-restricted-syntax': OFF,
+    'no-irregular-whitespace': OFF,
   },
 };
