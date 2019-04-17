@@ -144,8 +144,8 @@ class ContactComp extends Component {
             <SectionContent>
               <Title>{callUsLabel}</Title>
               <PhoneNumbers>
-                <Phone href="tel:+48 512 041 057">+48 512 041 057</Phone>
                 <Phone href="tel:+48 692 666 146">+48 692 666 146</Phone>
+                <Phone href="tel:+48 512 041 057">+48 512 041 057</Phone>
               </PhoneNumbers>
               <Title style={{ paddingTop: '60px' }}>{sendMessageLabel}</Title>
               <Form

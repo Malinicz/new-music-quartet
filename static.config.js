@@ -31,6 +31,22 @@ export default {
           moment(a.date).format('YYYYMMDD') - moment(b.date).format('YYYYMMDD')
       );
 
+    const upcomingConcerts = concertsList.filter(
+      (concert) =>
+        moment(concert.date)
+          .endOf('day')
+          .valueOf() >= moment().valueOf()
+    );
+
+    const recentConcerts = concertsList
+      .filter(
+        (concert) =>
+          moment(concert.date)
+            .endOf('day')
+            .valueOf() < moment().valueOf()
+      )
+      .reverse();
+
     const videosList = contentfulData.items
       .filter(
         (item) =>
@@ -65,7 +81,7 @@ export default {
         getData: () => ({
           routeData: pl.home,
           sharedData: pl.shared,
-          concerts: concertsList,
+          concerts: upcomingConcerts,
           videos: videosList,
           projects: projectsListPl,
           canonicalUrl: `${siteRoot}/`,
@@ -77,7 +93,7 @@ export default {
         getData: () => ({
           routeData: en.home,
           sharedData: en.shared,
-          concerts: concertsList,
+          concerts: upcomingConcerts,
           videos: videosList,
           projects: projectsListEn,
           canonicalUrl: `${siteRoot}/en/`,
@@ -125,7 +141,8 @@ export default {
         getData: () => ({
           routeData: pl.concerts,
           sharedData: pl.shared,
-          concerts: concertsList,
+          upcomingConcerts,
+          recentConcerts,
           canonicalUrl: `${siteRoot}/koncerty/`,
         }),
       },
@@ -135,7 +152,8 @@ export default {
         getData: () => ({
           routeData: en.concerts,
           sharedData: en.shared,
-          concerts: concertsList,
+          upcomingConcerts,
+          recentConcerts,
           canonicalUrl: `${siteRoot}/concerts/`,
         }),
       },
