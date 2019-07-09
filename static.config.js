@@ -22,7 +22,8 @@ export default {
     const concertsList = contentfulData.items
       .filter(
         (item) =>
-          item.fields.category &&
+          item.fields.category && 
+          item.fields.category.fields &&
           item.fields.category.fields.name === 'concerts'
       )
       .map((entry) => ({ ...entry.fields }))
@@ -50,7 +51,9 @@ export default {
     const videosList = contentfulData.items
       .filter(
         (item) =>
-          item.fields.category && item.fields.category.fields.name === 'videos'
+          item.fields.category && 
+          item.fields.category.fields &&
+          item.fields.category.fields.name === 'videos'
       )
       .map((entry) => ({ ...entry.fields }));
 
@@ -58,6 +61,7 @@ export default {
       .filter(
         (item) =>
           item.fields.category &&
+          item.fields.category.fields &&
           item.fields.category.fields.name === 'projects'
       )
       .map((entry) => ({ ...entry.fields }));
@@ -66,6 +70,7 @@ export default {
       .filter(
         (item) =>
           item.fields.category &&
+          item.fields.category.fields &&
           item.fields.category.fields.name === 'projects'
       )
       .map((entry) => ({
