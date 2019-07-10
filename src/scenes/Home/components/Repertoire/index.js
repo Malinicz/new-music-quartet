@@ -44,8 +44,9 @@ export const Repertoire = withRouteData(
   ({ routeData, createRef, isActive }) => {
     const { title, list, mainPhotoAlt } = routeData.repertoire;
 
-    const firstColumn = list.slice(0, 5);
-    const secondColumn = list.slice(5);
+    const middleIndex = Math.floor(list.length / 2);
+    const firstColumn = list.slice(0, middleIndex);
+    const secondColumn = list.slice(middleIndex);
 
     return (
       <StandardSection ref={(el) => createRef('repertoire', el)} name={title}>
