@@ -44,7 +44,7 @@ export const Repertoire = withRouteData(
   ({ routeData, createRef, isActive }) => {
     const { title, list, mainPhotoAlt } = routeData.repertoire;
 
-    const middleIndex = Math.floor(list.length / 2);
+    const middleIndex = Math.ceil(list.length / 2);
     const firstColumn = list.slice(0, middleIndex);
     const secondColumn = list.slice(middleIndex);
 
