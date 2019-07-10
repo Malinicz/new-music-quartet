@@ -4,7 +4,6 @@ import { object } from 'prop-types';
 import styled from 'styles';
 
 import {
-  H2,
   StandardSection,
   StandardSectionMain,
   StandardSectionAside,
@@ -43,7 +42,7 @@ const Song = styled.div`
 
 export const Repertoire = withRouteData(
   ({ routeData, createRef, isActive }) => {
-    const { title, subtitle, list, mainPhotoAlt } = routeData.repertoire;
+    const { title, list, mainPhotoAlt } = routeData.repertoire;
 
     const firstColumn = list.slice(0, 5);
     const secondColumn = list.slice(5);
@@ -65,7 +64,6 @@ export const Repertoire = withRouteData(
               <CrossElement left />
             </SectionImage>
             <SectionContent>
-              <H2>{subtitle}</H2>
               <SongsHolder>
                 <SongsColumn>
                   {firstColumn.map((song) => (
