@@ -7,6 +7,7 @@ import { LanguageSwitch } from './LanguageSwitch';
 
 import logo from 'assets/logo-black.svg';
 import pic from 'assets/main.jpg';
+import picMobile from 'assets/main-mobile.jpg';
 
 const IntroHolder = styled(Section)`
   max-width: 100%;
@@ -31,6 +32,10 @@ const Photo = styled.div`
   border-radius: 2px;
   width: 100%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    background-image: url(${picMobile});
+  }
 `;
 
 export const Intro = ({ handleLanguageSwitch, activeLanguage }) => {
