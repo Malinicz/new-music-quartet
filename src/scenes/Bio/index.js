@@ -19,7 +19,7 @@ import bio from 'assets/bio.jpg';
 import katarzynaPhoto from 'assets/katarzyna.jpg';
 import paulinaPhoto from 'assets/paulina.jpg';
 import karalinaPhoto from 'assets/karalina.jpg';
-import dominikaPhoto from 'assets/dominika.jpg';
+import edytaPhoto from 'assets/edyta.jpg';
 
 const TeamPhotosHolder = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ class Bio extends Component {
         title,
         paragraphs,
         katarzyna,
-        dominika,
+        edyta,
         paulina,
         karalina,
         mainPhotoAlt,
@@ -96,9 +96,9 @@ class Bio extends Component {
                   <PersonInstrument>{karalina.instrument}</PersonInstrument>
                 </PersonHolder>
                 <PersonHolder>
-                  <PersonPhoto src={dominikaPhoto} />
-                  <PersonName>{dominika.name}</PersonName>
-                  <PersonInstrument>{dominika.instrument}</PersonInstrument>
+                  <PersonPhoto src={edytaPhoto} />
+                  <PersonName>{edyta.name}</PersonName>
+                  <PersonInstrument>{edyta.instrument}</PersonInstrument>
                 </PersonHolder>
               </TeamPhotosHolder>
             </SinglePageSectionContent>

@@ -74,9 +74,22 @@ const MenuHolder = styled.div`
   }
 `;
 
+const Label = styled.div`
+  position: absolute;
+  top: 12px;
+  left: -55px;
+  font-family: ${({ theme }) => theme.secondaryFontFamily};
+  text-transform: uppercase;
+  font-weight: bold;
+  color: ${({ theme, isDark }) =>
+    isDark ? theme.colors.darker : theme.colors.brightest};
+  transition: transform 0.2s ease, background-color 0.3s ease;
+`;
+
 export const MenuBox = ({ handleClick, isDark }) => {
   return (
     <MenuHolder onClick={handleClick}>
+      <Label isDark={isDark}>MENU</Label>
       <MenuBoxTL isDark={isDark} />
       <MenuBoxTR isDark={isDark} />
       <MenuBoxBL isDark={isDark} />

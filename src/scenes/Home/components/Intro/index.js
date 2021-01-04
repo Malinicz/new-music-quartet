@@ -20,9 +20,14 @@ const IntroHolder = styled(Section)`
 const Logo = styled.img`
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 20%;
+  top: 10%;
+  transform: translate(-50%, -50%);
   width: 300px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+    top: 20%;
+    width: 230px;
+  }
 `;
 
 const Photo = styled.div`
