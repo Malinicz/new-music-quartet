@@ -14,7 +14,7 @@ export const Section = styled.section`
 `;
 
 export const StandardSection = styled(Section)`
-  padding-top: 80px;
+  padding-top: 120px;
 `;
 
 export const StandardSectionMain = styled.div`
@@ -55,8 +55,8 @@ export const SectionImage = styled.div`
 
 export const SectionHeading = styled(H1)`
   position: absolute;
-  top: -0.6em;
-  left: 20px;
+  top: -1.2em;
+  left: 0;
   z-index: 5;
   display: flex;
   align-items: center;
